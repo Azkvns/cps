@@ -14,7 +14,6 @@ body {
     justify-content: space-around;
     align-items: center;
     min-height: 88px;
-    padding: 0 16px;
 }
 
 .main-header__right-block {
@@ -63,7 +62,7 @@ body {
 
 .main-header__menu {
     order: -1;
-    margin: 8px;
+    margin: 16px;
 }
 
 .main-header__menu::before {
