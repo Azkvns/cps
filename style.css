@@ -144,3 +144,16 @@ body {
     border-top-right-radius: 10px;
 
 }
+
+.sub-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.sub-nav__item {
+    list-style: none;
+    /* display: inline-block; */
+}
