@@ -38,65 +38,47 @@ body {
     min-height: 88px;
     border-bottom: 1px solid #D9FFF5;
     background-color: #FFFFFF;
+    padding: 0 8px;
 }
 
 @media (min-width: 540px) and (max-width: 1120px) {
     .main-header {
-        padding: 0 8px;
+        padding: 0 16px;
     }
 }
 
 @media (min-width: 1120px) {
     .main-header {
-        position: absolute;
-        width: 100%;
-        background-color: #F8F8F8;
+        display: none;
     }
 }
 
-.main-header__pre-right-block {
-    display: flex;
-    justify-content: space-between;
-    min-width: 152px;
-    margin-right: 20px;
+
+.delimetr {
+    width: 2px;
+    min-height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
 }
 
-@media (max-width: 540px),
-(min-width: 1120px) {
-    .main-header__pre-right-block {
-        position: absolute;
-        top: -100%;
+.main-header__delimetr {
+    margin: 0 12px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+@media (max-width: 540px) {
+    .main-header__delimetr--right {
+        margin-left: auto;
     }
 }
 
-.main-header__right-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    min-width: 96px;
-    margin: 0 16px 0 20px;
-}
-
-@media (max-width: 1120px) {
-    .main-header__right-block::before {
-        content: "";
-        position: absolute;
-        width: 2px;
-        min-height: 32px;
-        background-color: #EAEAEA;
-        left: -20px;
-        top: 4px;
-        border-radius: 1px;
+@media (max-width: 540px) {
+    .main-header__delimetr--left {
+        display: none;
     }
 }
 
-@media (min-width: 1120px) {
-    .main-header__right-block {
-        position: static;
-        margin: 42px 32px 20px auto;
-    }
-}
 
 .logo {
     outline: none;
@@ -106,11 +88,9 @@ body {
     flex-grow: 1;
     display: block;
     position: relative;
+    margin: 8px;
 }
 
-.main-header__logo::before {
-    content: "";
-}
 
 @media (min-width: 1120px) {
 
@@ -126,17 +106,6 @@ body {
         margin-left: 20px;
     }
 
-    .main-header__logo::before {
-        content: "";
-        position: absolute;
-        width: 2px;
-        min-height: 32px;
-        background-color: #EAEAEA;
-        left: -20px;
-        top: 11px;
-        border-radius: 1px;
-    }
-
 
 }
 
@@ -144,42 +113,31 @@ body {
     margin: 8px;
 }
 
-.button {
+.nav-button {
     outline: none;
     display: inline-block;
     cursor: pointer;
-    border: 0;
-    text-align: center;
-    white-space: nowrap;
-    color: black;
-    text-decoration: none;
-}
-
-.button__image {
     min-width: 40px;
     min-height: 40px;
-    display: inline-block;
+    font-size: 0;
     background: #FF3E79 50% no-repeat;
     border-radius: 50%;
-    vertical-align: middle;
+    border: 0;
 }
 
-.button__label {
-    vertical-align: middle;
-    margin: 9px;
-    font-size: 0;
-    margin: 0;
+.main-header__nav-button {
+    margin: 8px;
 }
 
-.button__image:hover {
+.main-header__nav-button:hover {
     background-color: #EE2D68;
 }
 
-.button__image:active {
+.main-header__nav-button:active {
     background-color: #DD1C57;
 }
 
-.button__image:focus {
+.main-header__nav-button:focus {
     box-shadow: 0 0 2px 0px #555;
 }
 
@@ -188,56 +146,44 @@ body {
 }
 
 
-.main-header__menu {
-    order: -1;
-    margin: 16px;
-}
-
-.main-header__menu::after {
-    width: 18px;
-    height: 16px;
-    top: 12px;
-    left: 11px;
-    background-image: url("img/menu.svg");
-}
-
-
-@media (min-width: 1120px) {
-
-    .main-header__menu {
-        position: absolute;
-        top: -100%;
-    }
-}
-
-
-@media (min-width: 1120px) {
-
-    .button__label-request,
-    .button__label-check {
-        font-size: 16px;
-    }
-}
-
-.button__image-call {
+.nav-button--call {
     background-image: url("img/call.svg");
 }
 
-.button__image-feedback {
+.nav-button--feedback {
     background-image: url("img/feedback.svg");
 }
 
-.button__image-profile {
+.nav-button--profile {
     background-image: url("img/personal.svg");
 }
 
-.button__image-check {
+.nav-button--check {
     background-image: url("img/check.svg");
 }
 
-.button__image-request {
+.nav-button--request {
     background-image: url("img/request.svg");
 }
+
+.nav-button--menu {
+    background-image: url("img/menu.svg");
+}
+
+.main-header__nav-button--menu {
+    order: -1;
+}
+
+@media (max-width: 540px),
+(min-width: 1120px) {
+
+    .nav-button--call,
+    .nav-button--feedback,
+    .nav-button--profile {
+        display: none;
+    }
+}
+
 
 /* MAIN */
 
