@@ -140,8 +140,11 @@ body {
 
 }
 
+.main-header__button {
+    margin: 8px;
+}
+
 .button {
-    font-size: 0;
     outline: none;
     display: inline-block;
     cursor: pointer;
@@ -149,6 +152,7 @@ body {
     text-align: center;
     white-space: nowrap;
     color: black;
+    text-decoration: none;
 }
 
 .button__image {
@@ -163,6 +167,8 @@ body {
 .button__label {
     vertical-align: middle;
     margin: 9px;
+    font-size: 0;
+    margin: 0;
 }
 
 .button__image:hover {
@@ -204,10 +210,6 @@ body {
     }
 }
 
-.button__label {
-    font-size: 0;
-    display: inline-block;
-}
 
 @media (min-width: 1120px) {
 
@@ -218,7 +220,7 @@ body {
 }
 
 .button__image-call {
-    background-image: url(img/call.svg);
+    background-image: url("img/call.svg");
 }
 
 .button__image-feedback {
