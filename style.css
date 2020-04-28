@@ -40,13 +40,13 @@ body {
     background-color: #FFFFFF;
 }
 
-@media (min-width: 540px) and (max-width: 1440px) {
+@media (min-width: 540px) and (max-width: 1120px) {
     .main-header {
         padding: 0 8px;
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
     .main-header {
         position: absolute;
         width: 100%;
@@ -62,7 +62,7 @@ body {
 }
 
 @media (max-width: 540px),
-(min-width: 1440px) {
+(min-width: 1120px) {
     .main-header__pre-right-block {
         position: absolute;
         top: -100%;
@@ -78,7 +78,7 @@ body {
     margin: 0 16px 0 20px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1120px) {
     .main-header__right-block::before {
         content: "";
         position: absolute;
@@ -91,12 +91,10 @@ body {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
     .main-header__right-block {
         position: static;
         margin: 42px 32px 20px auto;
-        /* top: 0px; */
-        /* right: -100px; */
     }
 }
 
@@ -114,7 +112,7 @@ body {
     content: "";
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
 
     .main-header__logo {
         position: absolute;
@@ -122,7 +120,7 @@ body {
     }
 }
 
-@media (min-width: 540px) and (max-width: 1440px) {
+@media (min-width: 540px) and (max-width: 1120px) {
 
     .main-header__logo {
         margin-left: 20px;
@@ -143,27 +141,39 @@ body {
 }
 
 .button {
-    background-color: #FF3E79;
-    min-width: 40px;
-    min-height: 40px;
-    border-radius: 50%;
-    border: 0;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
     font-size: 0;
     outline: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: black;
 }
 
-.button:hover {
+.button__image {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-block;
+    background: #FF3E79 50% no-repeat;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.button__label {
+    vertical-align: middle;
+    margin: 9px;
+}
+
+.button__image:hover {
     background-color: #EE2D68;
 }
 
-.button:active {
+.button__image:active {
     background-color: #DD1C57;
 }
 
-.button:focus {
+.button__image:focus {
     box-shadow: 0 0 2px 0px #555;
 }
 
@@ -172,18 +182,12 @@ body {
 }
 
 
-.button::before {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-}
-
 .main-header__menu {
     order: -1;
     margin: 16px;
 }
 
-.main-header__menu::before {
+.main-header__menu::after {
     width: 18px;
     height: 16px;
     top: 12px;
@@ -192,7 +196,7 @@ body {
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
 
     .main-header__menu {
         position: absolute;
@@ -200,44 +204,37 @@ body {
     }
 }
 
-.button-call::before {
-    width: 18px;
-    height: 18px;
-    top: 11px;
-    left: 11px;
-    background-image: url("img/call.svg");
+.button__label {
+    font-size: 0;
+    display: inline-block;
 }
 
-.button-feedback::before {
-    width: 20px;
-    height: 20px;
-    top: 11px;
-    left: 10px;
+@media (min-width: 1120px) {
+
+    .button__label-request,
+    .button__label-check {
+        font-size: 16px;
+    }
+}
+
+.button__image-call {
+    background-image: url(img/call.svg);
+}
+
+.button__image-feedback {
     background-image: url("img/feedback.svg");
 }
 
-.button-profile::before {
-    width: 20px;
-    height: 18px;
-    top: 10px;
-    left: 10px;
+.button__image-profile {
     background-image: url("img/personal.svg");
 }
 
-.button-request::before {
-    width: 20px;
-    height: 20px;
-    top: 10px;
-    left: 10px;
-    background-image: url("img/request.svg");
+.button__image-check {
+    background-image: url("img/check.svg");
 }
 
-.button-check::before {
-    width: 16px;
-    height: 20px;
-    top: 10px;
-    left: 12px;
-    background-image: url("img/check.svg");
+.button__image-request {
+    background-image: url("img/request.svg");
 }
 
 /* MAIN */
@@ -282,6 +279,14 @@ body {
 .main-page__sub-nav {
     padding-left: 0px;
     margin: 10px 16px 24px 16px;
+    position: relative;
+}
+
+@media (min-width: 1120px) {
+    .main-page__sub-nav {
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
 }
 
 .sub-nav__item {
