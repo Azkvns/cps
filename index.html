@@ -9,51 +9,58 @@
 </head>
 
 <body>
-
+    <header class="site-header">
+        <span class="delimetr site-header__delimetr--left site-header__delimetr"></span>
+        <a href="#" class="logo site-header__logo">
+            <img src="img/logo.svg" alt="CPS Ремонт техники Dell" class="logo_logo"
+                title="CPS - Центр по ремонту техники" width="96"></a>
+        <button class="nav-button nav-button--menu site-header__nav-button site-header__nav-button--menu"
+            title="Меню">Меню</button>
+        <a href="#" class="nav-button nav-button--call site-header__nav-button" title="Заказать звонок">Заказать
+            звонок</a>
+        <a href="#" class="nav-button nav-button--feedback site-header__nav-button" title="Обратная связь">Обратная
+            связь</a>
+        <a href="#" class="nav-button nav-button--profile site-header__nav-button" title="Профиль">Профиль</a>
+        <span class="delimetr site-header__delimetr--right site-header__delimetr"></span>
+        <a href="#" class="nav-button nav-button--check site-header__nav-button" title="Статус ремонта">Статус
+            ремонта</a>
+        <a href="#" class="nav-button nav-button--request site-header__nav-button" title="Оставить заявку">Оставить
+            заявку</a>
+    </header>
+    <main class="main-content">
+        <header class="page-header main-content__page-header">
+            <h1 class="page-title page-header__title">Услуги и сервисы</h1>
+            <a href="#" class="page-link page-header__page-link">Оставить заявку
+                <div class="nav-button nav-button--request page-link__nav-button"></div>
+            </a>
+            <a href="#" class="page-link page-header__page-link">Статус ремонта
+                <div class="nav-button nav-button--check page-link__nav-button"></div>
+            </a>
+            <ul class="sub-nav main-content__sub-nav">
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link sub-nav__item--active">Ремонтируемые
+                        бренды</a></li>
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link">Ремонтируемые устройства</a></li>
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link">Цены на услуги</a></li>
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link">Адреса сервисных центров</a></li>
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link">Специальные цены</a></li>
+                <li class="sub-nav__item"><a href="#" class="sub-nav__link">Отзывы</a></li>
+            </ul>
+        </header>
+        <article class="card main-content__card">
+            <div class="card__inner">
+                <p class="card__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                    отремонтировать
+                    свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="card__text card__text--desktop">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                </p>
+                <a href="#" class="card__link page-link">Читать далее</a>
+            </div>
+            <img src="./img/card-picture.jpg" alt="CPS логотип и часы работы офиса" width="532px" class="card__picture">
+        </article>
+    </main>
 </body>
-<header class="main-header">
-    <span class="delimetr main-header__delimetr--left main-header__delimetr"></span>
-    <a href="#" class="logo main-header__logo">
-        <img src="img/logo.svg" alt="CPS Ремонт техники Dell" class="logo_logo" title="CPS - Центр по ремонту техники"
-            width="96"></a>
-    <button class="nav-button nav-button--menu main-header__nav-button main-header__nav-button--menu"
-        title="Меню">Меню</button>
-    <a href="#" class="nav-button nav-button--call main-header__nav-button" title="Заказать звонок">Заказать
-        звонок</a>
-    <a href="#" class="nav-button nav-button--feedback main-header__nav-button" title="Обратная связь">Обратная
-        связь</a>
-    <a href="#" class="nav-button nav-button--profile main-header__nav-button" title="Профиль">Профиль</a>
-    <span class="delimetr main-header__delimetr--right main-header__delimetr"></span>
-    <a href="#" class="nav-button nav-button--check main-header__nav-button" title="Статус ремонта">Статус
-        ремонта</a>
-    <a href="#" class="nav-button nav-button--request main-header__nav-button" title="Оставить заявку">Оставить
-        заявку</a>
-</header>
-<main class="main-page">
-    <h1 class="page-title main-page__title">Услуги и сервисы</h1>
-    <ul class="sub-nav main-page__sub-nav">
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link sub-nav__item--active">Ремонтируемые
-                бренды</a></li>
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link">Ремонтируемые устройства</a></li>
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link">Цены на услуги</a></li>
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link">Адреса сервисных центров</a></li>
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link">Специальные цены</a></li>
-        <li class="sub-nav__item"><a href="#" class="sub-nav__link">Отзывы</a></li>
-    </ul>
-    <article class=" card main-page__card">
-        <div class="card__inner">
-            <p class="card__text">
-                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                отремонтировать
-                свой ноутбук Dell с официальной гарантией производителя.
-            </p>
-            <p class="card__text card__text--hidden">
-                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-            </p>
-            <a href="#" class="card__link">Читать далее</a>
-        </div>
-        <img src="./img/card-picture.jpg" alt="CPS логотип и часы работы офиса" class="card__picture">
-    </article>
-</main>
 
 </html>
