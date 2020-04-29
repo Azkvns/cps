@@ -228,6 +228,12 @@ body {
     }
 }
 
+@media (min-width: 1120px) {
+    .main-content {
+        padding-top: 42px;
+    }
+}
+
 .page-title {
     font-size: 28px;
     line-height: 40px;
@@ -433,10 +439,19 @@ body {
     background: url("./img/more.svg") 50% no-repeat;
 }
 
+
 @media (max-width: 1120px) {
     .card__picture {
-        flex-basis: 360px;
-        flex-grow: 1;
+        /* flex-basis: 360px; */
+        /* flex-grow: 1; */
+        flex-shrink: 1;
         max-width: 532px;
+    }
+}
+
+
+@media (max-width: 532px) {
+    .card__picture {
+        width: 100%;
     }
 }
