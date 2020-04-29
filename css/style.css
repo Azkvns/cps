@@ -1,4 +1,4 @@
-@font-face {
+`@font-face {
     font-family: "TTLakes";
     font-style: normal;
     font-weight: 500;
@@ -148,27 +148,27 @@ body {
 
 
 .nav-button--call {
-    background-image: url("img/call.svg");
+    background-image: url("../img/call.svg");
 }
 
 .nav-button--feedback {
-    background-image: url("img/feedback.svg");
+    background-image: url("../img/feedback.svg");
 }
 
 .nav-button--profile {
-    background-image: url("img/personal.svg");
+    background-image: url("../img/personal.svg");
 }
 
 .nav-button--check {
-    background-image: url("img/check.svg");
+    background-image: url("../img/check.svg");
 }
 
 .nav-button--request {
-    background-image: url("img/request.svg");
+    background-image: url("../img/request.svg");
 }
 
 .nav-button--menu {
-    background-image: url("img/menu.svg");
+    background-image: url("../img/menu.svg");
 }
 
 .site-header__nav-button--menu {
@@ -436,7 +436,7 @@ body {
     height: 10px;
     top: 14px;
     left: -12px;
-    background: url("./img/more.svg") 50% no-repeat;
+    background: url("../img/more.svg") 50% no-repeat;
 }
 
 
