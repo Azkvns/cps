@@ -393,6 +393,12 @@ body {
     }
 }
 
+@media (min-width: 768px) {
+    .card__inner {
+        margin-right: 48px;
+    }
+}
+
 
 .card__text {
     font-size: 14px;
@@ -400,24 +406,13 @@ body {
     line-height: 18px;
     letter-spacing: 0.2px;
     margin: 0;
+    max-height: 8em;
+    overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 360px) {
     .card__text {
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 1120px) {
-    .card__text--desktop {
-        position: absolute;
-        clip: rect(1px 1px 1px 1px);
-        clip: rect(1px, 1px, 1px, 1px);
-        padding: 0;
-        border: 0;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
+        max-height: 9em;
     }
 }
 
