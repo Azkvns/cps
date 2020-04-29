@@ -442,10 +442,13 @@ body {
 
 @media (max-width: 1120px) {
     .card__picture {
-        /* flex-basis: 360px; */
-        /* flex-grow: 1; */
-        flex-shrink: 1;
         max-width: 532px;
+    }
+}
+
+@media (min-width: 532px) and (max-width: 1120px) {
+    .card__picture {
+        max-width: 360px;
     }
 }
 
