@@ -19,29 +19,53 @@
     src: url("./fonts/TTLakes-Light.woff") format("woff");
 }
 
-* {
-    box-sizing: border-box;
+html {
+    font-family: "TTLakes", sans-serif;
+    font-size: 16px;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #F8F8F8;
-    font-family: "TTLakes", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: minmax(5.5rem, auto) auto auto;
+    row-gap: 1.5rem;
+    grid-template-areas:
+        ". header ."
+        ". sub-header ."
+        "content content content";
 }
 
 /* HEADER */
-
-.site-header {
+.header {
+    grid-area: header;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 88px;
     border-bottom: 1px solid #D9FFF5;
     background-color: #FFFFFF;
-    padding: 0 8px;
 }
 
+/* SUB-HEADER */
+
+.container__sub-header {
+    grid-area: sub-header;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-header {}
+
+/* CONTENT */
+
+.content {
+    grid-area: content;
+}
+
+/*
 @media (min-width: 540px) and (max-width: 1100px) {
     .site-header {
         padding: 0 16px;
@@ -187,7 +211,7 @@ body {
 
 
 /* MAIN */
-
+/*
 .main-content {
     padding: 24px 0 0 0;
     margin-bottom: 24px;
@@ -281,7 +305,6 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    /* padding: 4px; */
 }
 
 .page-button:hover {
@@ -453,3 +476,5 @@ body {
         width: 100%;
     }
 }
+
+*/
