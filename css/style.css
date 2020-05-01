@@ -399,15 +399,19 @@ html {
     }
 }
 
+.card__picture {
+    max-width: 100%;
+}
+
 @media (min-width: 768px) {
     .card__picture {
-        flex-basis: 360px;
+        max-width: 50%;
     }
 }
 
 @media (min-width: 1120px) {
     .card__picture {
-        flex-basis: 532px;
+        max-width: 532px;
     }
 }
 
