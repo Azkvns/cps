@@ -1,38 +1,54 @@
-`@font-face {
-    font-family: "TTLakes";
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Medium.woff') format('woff'),
+        url('../fonts/TTLakes-Medium.ttf') format('truetype');
     font-weight: 500;
-    src: url("../fonts/TTLakes-Medium.woff") format("woff");
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "TTLakes";
-    font-style: normal;
-    font-weight: 900;
-    src: url("../fonts/TTLakes-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "TTLakes";
-    font-style: normal;
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Light.eot');
+    src: local('TT Lakes Light'), local('TTLakes-Light'),
+        url('../fonts/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Light.woff') format('woff'),
+        url('../fonts/TTLakes-Light.ttf') format('truetype');
     font-weight: 300;
-    src: url("../fonts/TTLakes-Light.woff") format("woff");
+    font-style: normal;
 }
+
+
+/* Убираем бордеры на кнопках в мозилле */
+::-moz-focus-inner {
+    border: 0;
+}
+
 
 html {
-    font-family: "TTLakes", sans-serif;
+    font-family: "TT Lakes", sans-serif;
     font-size: 16px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #F8F8F8;
-}
 
 .container {
-    max-width: 70rem;
+    max-width: 1120px;
+    padding: 0;
     margin: 0 auto;
+    background-color: #F8F8F8;
 }
 
 /* HEADER */
@@ -46,10 +62,27 @@ body {
 }
 
 .container__header {
-    grid-area: header;
-    padding: 0 0.5rem;
+    padding: 0 8px;
     margin-bottom: 24px;
 }
+
+@media (min-width: 768px) {
+    .container__header {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .container__header {
+        display: none;
+    }
+
+    .container {
+        padding-top: 42px;
+    }
+}
+
+
 
 .delimetr {
     min-height: 32px;
@@ -101,10 +134,6 @@ body {
     box-shadow: 0 0 2px 0px #555;
 }
 
-/* 
-::-moz-focus-inner {
-    border: 0;
-} */
 
 
 .button--call {
@@ -139,18 +168,35 @@ body {
     display: none;
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+
+    .button--feedback,
+    .button--profile,
+    .button--call,
+    .header__delimetr--left {
+        display: block;
+    }
+}
+
+
 /* SUB-HEADER */
 
 .container__sub-header {
-    grid-area: sub-header;
     margin-bottom: 24px;
+    padding: 0 16px;
+
 }
 
 .sub-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    padding: 0 16px;
+    align-items: center;
+}
+
+@media (min-width: 1120px) {
+    .container__sub-header {
+        padding: 0 32px;
+    }
 }
 
 .title {
@@ -169,10 +215,72 @@ body {
     display: inline-block;
     width: 4px;
     height: 40px;
-    transform: translate(-1rem, 0.5rem);
+    transform: translate(-16px, 8px);
     background-color: #41F6D7;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+
+@media (min-width: 1120px) {
+    .sub-header__title::before {
+        transform: translate(-32px, 8px);
+        border-radius: 2px;
+    }
+
+    .sub-header__title {
+        margin-bottom: 8px;
+    }
+}
+
+.button-wrapper {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    outline: none;
+    display: none;
+    align-items: center;
+    background-color: #FFFFFF00;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+}
+
+.suv-header__button-wrapper {
+    margin-left: 40px;
+}
+
+.button-wrapper__label {
+    margin-right: 8px;
+}
+
+.button-wrapper:hover {
+    text-decoration: 1px underline black;
+}
+
+
+.button-wrapper:active {
+    background-color: #EEEEEE;
+}
+
+.button-wrapper:hover>.button {
+    background-color: #EE2D68;
+}
+
+.button-wrapper:focus>.button {
+    box-shadow: 0 0 2px 0px #555;
+}
+
+.button-wrapper:active>.button {
+    background-color: #DD1C57;
+}
+
+@media (min-width: 1120px) {
+    .button-wrapper {
+        display: flex;
+    }
 }
 
 .sub-nav {
@@ -187,8 +295,14 @@ body {
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     align-items: baseline;
+}
+
+@media (min-width: 1120px) {
+    .sub-header__sub-nav {
+        flex-wrap: wrap;
+    }
 }
 
 .sub-nav__item {
@@ -221,23 +335,44 @@ body {
     border-radius: 6px;
 }
 
-.sub-nav__item--active {}
-
 /* CONTENT */
 
-.content {
-    grid-area: content;
-}
 
 .card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.content__card {}
+@media (min-width: 768px) {
+    .main-content__card {
+        padding: 0 24px;
+    }
+}
 
-.card__wrapper {
+@media (min-width: 1120px) {
+    .main-content__card {
+        padding: 0 32px;
+    }
+}
+
+.card__inner {
     padding: 0 16px;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+    .card__inner {
+        flex-basis: 312px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .card__inner {
+        flex-basis: 490px;
+        padding: 0;
+    }
 }
 
 .card__text {
@@ -246,226 +381,73 @@ body {
     line-height: 18px;
     letter-spacing: 0.2px;
     margin: 0;
-    max-height: 8em;
+    max-height: 8rem;
     overflow: hidden;
 }
 
-/*
-@media (min-width: 540px) and (max-width: 1100px) {
-    .site-header {
-        padding: 0 16px;
+@media (min-width: 768px) {
+    .card__text {
+        margin-bottom: 10px;
     }
 }
 
-@media (min-width: 1100px) {
-    .site-header {
-        display: none;
+@media (min-width: 1120px) {
+    .card__text {
+        max-height: 9rem;
+        margin-right: 36px;
+        margin-bottom: 12px;
     }
 }
 
-
-}
-
-@media (max-width: 540px) {
-    .site-header__delimetr--right {
-        margin-left: auto;
+@media (min-width: 768px) {
+    .card__picture {
+        flex-basis: 360px;
     }
 }
 
-@media (max-width: 540px) {
-    .site-header__delimetr--left {
-        display: none;
+@media (min-width: 1120px) {
+    .card__picture {
+        flex-basis: 532px;
     }
 }
 
-
-
-
-@media (min-width: 1100px) {
-
-    .site-header__logo {
-        position: absolute;
-        top: -100%;
-    }
-}
-
-@media (min-width: 540px) and (max-width: 1100px) {
-
-    .site-header__logo {
-        margin-left: 20px;
-    }
-
-
-}
-
-.site-header__button {
-    margin: 8px;
-}
-
-
-
-.site-header__nav-button--menu {
-    order: -1;
-}
-
-@media (max-width: 540px),
-(min-width: 1100px) {
-
-    .nav-button--call,
-    .nav-button--feedback,
-    .nav-button--profile {
-        display: none;
-    }
-}
-
-
-/* MAIN */
-/*
-.main-content {
-    padding: 24px 0 0 0;
-    margin-bottom: 24px;
-}
-
-@media (min-width: 768px) and (max-width: 1100px) {
-    .main-content__card {
-        padding: 0 24px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .main-content__card {
-        padding: 0 34px;
-    }
-}
-
-.page-header {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 16px 0 16px;
-    align-items: center;
-}
-
-.main-content__page-header {
-    margin-bottom: 24px;
-}
-
-@media (min-width: 768px) and (max-width: 1100px) {
-    .main-content__page-header {
-        padding: 0 24px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .main-content__page-header {
-        padding: 0 32px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .main-content {
-        padding-top: 42px;
-    }
-}
-
-
-
-@media (min-width: 768px) and (max-width: 1100px) {
-    .page-header__title::before {
-        left: -24px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .page-header__title::before {
-        left: -32px;
-    }
-}
-
-
-.page-button {
-    border: none;
-    background-color: #FFFFFF11;
-    display: inline-block;
-    text-decoration: none;
-    color: black;
+.card__button {
+    font-family: "TT Lakes", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-}
-
-.page-button:hover {
-    text-decoration: underline 0.1em black;
-}
-
-.page-button:active {
-    background-color: #EEEEEE;
-    border-radius: 10px;
-}
-
-.page-header__page-button {
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin: 0 12px;
-}
-
-.page-button__nav-button {
-    margin: 0 8px;
-}
-
-@media (max-width: 1100px) {
-    .page-header__page-button {
-        display: none;
-    }
-}
-
-
-
-
-
-
-@media (min-width: 360px) {
-    .card__text {
-        max-height: 9em;
-    }
-}
-
-.card__link {
-    text-decoration: none;
-    color: #1B1C21;
+    min-height: 24px;
+    padding: 4px 4px 4px 30px;
     position: relative;
-    margin-left: 22px;
-    padding: 8px;
+    outline: none;
+    display: inline-block;
+    background-color: #FFFFFF00;
+    border: 2px solid #41F6D700;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
-.card__link::before {
+.card__button::before {
     content: "";
     position: absolute;
-    width: 7px;
-    height: 10px;
-    top: 14px;
-    left: -12px;
-    background: url("../img/more.svg") 50% no-repeat;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0px;
+    background: url("../img/expand.svg") 50% no-repeat;
 }
 
-
-@media (max-width: 1100px) {
-    .card__picture {
-        max-width: 532px;
-    }
+.card__button:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #41F6D7;
 }
 
-@media (min-width: 532px) and (max-width: 1100px) {
-    .card__picture {
-        max-width: 360px;
-    }
+.card__button:focus {
+    border: 2px solid #41F6D7;
 }
 
-
-@media (max-width: 532px) {
-    .card__picture {
-        width: 100%;
-    }
+.card__button:active {
+    background-color: #EEEEEE;
+    border: 2px solid #41F6D7;
 }
-
-*/
