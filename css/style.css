@@ -368,6 +368,10 @@ html {
     justify-content: center;
 }
 
+.card__title {
+    font-size: 0;
+}
+
 @media (min-width: 768px) {
     .main-content__card {
         padding: 0 24px;
