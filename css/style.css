@@ -409,13 +409,14 @@ html {
     line-height: 18px;
     letter-spacing: 0.2px;
     margin: 0;
-    max-height: 8rem;
+    max-height: 6rem;
     overflow: hidden;
 }
 
 @media (min-width: 768px) {
     .card__text {
         margin-bottom: 10px;
+        max-height: 8rem;
     }
 }
 
