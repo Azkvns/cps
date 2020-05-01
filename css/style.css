@@ -437,8 +437,8 @@ html {
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 0;
-    left: 0px;
+    top: 4px;
+    left: 0;
     background: url("../img/expand.svg") 50% no-repeat;
 }
 
