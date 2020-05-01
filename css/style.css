@@ -233,7 +233,7 @@ html {
     }
 }
 
-.button-wrapper {
+.wide-button {
     font-family: "TT Lakes", sans-serif;
     font-weight: 500;
     font-size: 1rem;
@@ -241,44 +241,68 @@ html {
     letter-spacing: -0.2px;
     outline: none;
     display: none;
-    align-items: center;
+    position: relative;
     background-color: #FFFFFF00;
     cursor: pointer;
     border-radius: 4px;
     border: 0;
+    padding: 2px 16px;
 }
 
-.suv-header__button-wrapper {
-    margin-left: 40px;
+.wide-button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    width: 40px;
+    height: 40px;
+    top: -8px;
+    right: -32px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
-.button-wrapper__label {
-    margin-right: 8px;
+.wide-button--check::after {
+    background-image: url("../img/check.svg");
 }
 
-.button-wrapper:hover {
-    text-decoration: 1px underline black;
+.wide-button--request::after {
+    background-image: url("../img/request.svg");
 }
 
 
-.button-wrapper:active {
-    background-color: #EEEEEE;
+.wide-button:focus::after {
+    box-shadow: 0 0 2px 0 #555;
 }
 
-.button-wrapper:hover>.button {
+.wide-button:hover::after {
     background-color: #EE2D68;
 }
 
-.button-wrapper:focus>.button {
-    box-shadow: 0 0 2px 0px #555;
-}
-
-.button-wrapper:active>.button {
+.wide-button:active::after {
     background-color: #DD1C57;
 }
 
+.sub-header__wide-button {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.wide-button:focus {
+    text-decoration: 1px underline black;
+}
+
+.wide-button:hover {
+    text-decoration: 1px underline black;
+}
+
+.wide-button:active {
+    background-color: #DDDDDD;
+}
+
 @media (min-width: 1120px) {
-    .button-wrapper {
+    .wide-button {
         display: flex;
     }
 }
