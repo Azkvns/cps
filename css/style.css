@@ -234,7 +234,6 @@ html {
     }
 }
 
-
 @media (min-width: 1120px) {
     .sub-header__title::before {
         transform: translate(-32px, 8px);
