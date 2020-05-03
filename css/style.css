@@ -242,6 +242,7 @@ html {
 
     .sub-header__title {
         margin-bottom: 8px;
+        margin-left: 0;
     }
 }
 
@@ -362,6 +363,7 @@ html {
 @media (min-width: 1120px) {
     .sub-header__sub-nav {
         flex-wrap: wrap;
+        padding-left: 16px;
     }
     .sub-nav::before {
         width: 0;
@@ -377,6 +379,13 @@ html {
 
 .sub-nav__item:first-child {
     margin-left: 16px; 
+}
+
+@media (min-width: 1120px) {
+    .sub-nav__item:first-child {
+        margin-left: 0; 
+    }
+
 }
 
 .sub-nav__link {
