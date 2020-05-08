@@ -20,17 +20,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('../fonts/TTLakes-Light.eot');
-    src: local('TT Lakes Light'), local('TTLakes-Light'),
-        url('../fonts/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/TTLakes-Light.woff') format('woff'),
-        url('../fonts/TTLakes-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
 /* Убираем бордеры на кнопках в мозилле */
 ::-moz-focus-inner {
     border: 0;
@@ -47,33 +36,37 @@ html {
 }
 
 .menu {
-    padding: 16px 0;
-    max-width: 320px;
-    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    max-width: 100%;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+     -2px 0px 4px rgba(69, 79, 126, 0.02);
     box-sizing: border-box;
     position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    row-gap: 32px;    
 }
 
-/* menu header */
+@media (min-width: 361px) {
+    .menu {
+        max-width: 360px;
+    }
+}
 
-.header {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 8px min-content min-content 1fr min-content 8px;
+/* menu menu-header */
+
+.menu-header {
+    display: flex;
     gap: 16px;
-    grid-template-areas: 
-    ". close-btn logo . search-btn .";
     align-items: center;
 }
 
-.logo {
-    outline: none;
-    display: block;
-}
-
-.header__logo {
+.menu-header__logo {
     box-sizing: border-box;
-    grid-area: logo;
+    margin-right: auto;
 }
 
 .button {
@@ -100,18 +93,6 @@ html {
     box-shadow: 0 0 2px 0px #555;
 }
 
-.header__button {
-}
-
-.header__button--close {
-    grid-area: close-btn;
-}
-
-.header__button--search {
-    grid-area: search-btn;
-}
-
-
 .button--call {
     background-image: url("../img/call.svg");
 }
@@ -135,17 +116,21 @@ html {
 
 /* menu nav */
 
-.menu__nav-wrapper {
-    padding: 0 16px;
+.nav {
+    margin-bottom: auto;
 }
 
-.nav {
+.nav-list {
     list-style: none;
     padding: 0;
 }
 
-.nav__link {
-    display: inline-block;
+.nav__nav-list {
+    margin: 0;
+}
+
+.nav-list__link {
+    display: block;
     padding: 16px 8px;
     position: relative;
     color: black;
@@ -154,13 +139,14 @@ html {
     cursor: pointer;
     border: 2px solid #ffffff00;
     outline: none;
+    margin-left: -8px;
 }
 
-.nav__link--active {
+.nav-list__link--active {
     color: #7e7e82;
 }
 
-.nav__link--active::before {
+.nav-list__link--active::before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -173,59 +159,46 @@ html {
     border-top-right-radius: 10px;
 }
 
-.nav__link:hover {
+.nav-list__link:hover {
     border: 2px solid #41F6D7;
     border-radius: 4px;
 }
 
-.nav__link:focus {
+.nav-list__link:focus {
     border: 2px solid #41F6D7;
     border-radius: 4px;
 }
 
-.nav__link:active {
+.nav-list__link:active {
     background-color: #eee;
 }
 
 
 
-/* menu footer */
+/* menu menu-footer */
 
-.footer {
-    display: grid;
-    grid-template-columns: 8px repeat(3, min-content) 1fr 8px;
-    grid-template-rows: min-content 16px min-content 12px min-content 40px min-content;
+.menu-footer {
+    display: flex;
     align-items: center;
-    column-gap: 16px;
-    grid-template-areas: 
-    ". call-btn feedback-btn profile-btn . .";
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.footer__button--call {
-    grid-area: call-btn;
+.menu-footer__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    margin-bottom: 4vh;
 }
 
-.footer__button--feedback {
-    grid-area: feedback-btn;
-}
-
-.footer__button--profile {
-    grid-area: profile-btn;
-}
-
-.footer__mail {
-    grid-row: 3/4;
-    grid-column: 2/-1;
+.menu-footer__mail {
     text-decoration: none;
     color: black;
     margin-right: auto;
+    flex-basis: 100%;
 }
 
-.footer__tel {
-    display: inline-block;
-    grid-row: 5/6;
-    grid-column: 2/-1;
+.menu-footer__tel {
     text-decoration: none;
     color: black;
     font-size: 24px;
@@ -233,11 +206,10 @@ html {
     letter-spacing: -0.6px;
     font-weight: bold;
     margin-right: auto;
+    flex-basis: 100%;
 }
 
-.footer__lang-list {
-    grid-row: 7/8;
-    grid-column: 2/-1;
+.menu-footer__lang-list {
     padding: 0;
     margin: 0;
 }
