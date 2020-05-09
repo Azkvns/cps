@@ -194,6 +194,10 @@ html {
     flex-wrap: wrap;
 }
 
+.menu__menu-footer {
+    margin-top: 16px;
+}
+
 .menu-footer__button {
     margin-right: 16px;
     margin-bottom: 16px;
