@@ -69,7 +69,7 @@ html {
     flex-shrink: 0;
 }
 
-.brands__button {
+.brands__link {
     display: flex;
     font-size: 0;
     position: relative;
@@ -87,11 +87,11 @@ html {
     transition: all 100ms ease-in;
 }
 
-.brands__item:last-of-type .brands__button {
+.brands__item:last-of-type .brands__link {
     margin-right: 16px;
 }
 
-.brands__button::after {
+.brands__link::after {
     content: "";
     position: absolute;
     width: 40px;
@@ -102,25 +102,73 @@ html {
     transition: all 100ms ease-out;
 }
 
-.brands__button:focus {
+.brands__link:focus {
     border-color: #ff3e79;
 
 }
 
-.brands__button:hover {
+.brands__link:hover {
     border-color: #ff3e79;
     box-shadow: 0 0 4px 4px #80808044;
 }
 
-.brands__button:active {
+.brands__link:active {
     box-shadow: 0 0 6px 4px #80808088;
 }
 
-.brands__button:hover::after {
+.brands__link:hover::after {
     transform: scale(1.2);
 }
 
 
-.brands__button:active::after {
+.brands__link:active::after {
     background-image: url("../img/go-fill.svg");
+}
+
+.brands__button {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    min-height: 24px;
+    padding: 4px 4px 4px 30px;
+    position: relative;
+    outline: none;
+    display: inline-block;
+    background-color: #FFFFFF00;
+    border: 2px solid #41F6D700;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.brands__button::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    left: 0;
+    background: url("../img/expand.svg") 50% no-repeat;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.brands__button:hover::before {
+    transform: rotate(360deg) scale(1.5);
+}
+
+.brands__button:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #41F6D7;
+}
+
+.brands__button:focus {
+    border: 2px solid #41F6D7;
+}
+
+.brands__button:active {
+    background-color: #EEEEEE;
+    border: 2px solid #41F6D7;
 }
