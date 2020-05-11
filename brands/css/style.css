@@ -166,9 +166,14 @@ html {
     border: 2px solid #41F6D7;
 }
 
-.swiper-slide {
-    flex-shrink: 1;
+@media (max-width: 767px) {
+    .brands__button-more {
+        display: none;
+    }
 }
+
+
+/* SWIPER */
 
 .swiper-pagination {
     position: static;
@@ -182,4 +187,13 @@ html {
 
 .swiper-pagination-bullet-active {
     background-color: #B5B6BC;
+}
+
+.swiper-slide {
+    width: 240px;
+    margin-left: 16px;
+}
+
+.swiper-slide:last-of-type {
+    margin-right: 16px;
 }
