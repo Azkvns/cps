@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Brands</title>
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body class="container">
-        <section class="brands">
-            <header class="brands__header">
-                <h2 class="brands__title">Ремонт техники различных брендов</h2>
-            </header>
-            <ul class="brands__list">
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/lenovo.png" class="brands__image"
-                            alt="логотип Lenovo">Lenovo</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="container">
+    <section class="brands">
+        <header class="brands__header">
+            <h2 class="brands__title">Ремонт техники различных брендов</h2>
+        </header>
+        <div class="swiper-container">
+            <ul class="brands__list swiper-wrapper">
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/lenovo.png" class="brands__image"
+                                alt="логотип Lenovo">Lenovo</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/samsung.png" class="brands__image"
-                            alt="логотип Samsung">Samsung</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/samsung.png" class="brands__image"
+                                alt="логотип Samsung">Samsung</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/apple.png" class="brands__image"
-                            alt="логотип Apple">Apple</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/apple.png" class="brands__image"
+                                alt="логотип Apple">Apple</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/bosch.png" class="brands__image"
-                            alt="логотип Bosch">Bosch</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/bosch.png" class="brands__image"
+                                alt="логотип Bosch">Bosch</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/hp.png" class="brands__image"
-                            alt="логотип HP">HP</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/hp.png" class="brands__image"
+                                alt="логотип HP">HP</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/acer.png" class="brands__image"
-                            alt="логотип Acer"></a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/acer.png" class="brands__image"
+                                alt="логотип Acer"></button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/sony.png" class="brands__image"
-                            alt="логотип Sony">Sony</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/sony.png" class="brands__image"
+                                alt="логотип Sony">Sony</button>
                 </li>
-                <li class="brands__item"><a href="#" class="brands__link">
-                        <img src="./img/viewsonic.png" class="brands__image"
-                            alt="логотип viewsonic">Viewsonic</a>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/viewsonic.png" class="brands__image"
+                                alt="логотип viewsonic">Viewsonic</button>
                 </li>
             </ul>
-            <button class="brands__button">Показать все</button>
-        </section>
-    </body>
+            <div class="swiper-pagination"></div>
+        </div>
+        <button class="brands__button-more">Показать все</button>
+    </section>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+            freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        // function addButton(evt) {
+        //     console.log(evt);
+        //     let brandsList = document.querySelector('.brands__list');
+        //     let brandsItem = document.createElement('li');
+        //     brandsItem.classList.add('brands__item swiper-slide');
+
+        //     let brandsLink = document.createElement('button');
+        //     brandsLink.classList.add('brands__button');
+        //     brandsLink.textContent = 'Samsung';
+        //     brandsItem.appendChild(brandsLink);
+        //     brandsLink.addEventListener('click', addButton);
+
+        //     let brandsImage = document.createElement('img');
+        //     brandsImage.classList.add('brands__image');
+        //     brandsImage.src = './img/samsung.png';
+        //     brandsImage.alt = 'логотип Samsung';
+        //     brandsLink.appendChild(brandsImage);
+
+        //     brandsList.appendChild(brandsItem);
+        // }
+
+        // let brandsButtons = document.querySelectorAll('.brands__button');
+        // for (let button of brandsButtons) {
+        //     button.addEventListener('click', addButton);
+        // }
+
+        // document.addEventListener('keydown', addButton);
+    </script>
+</body>
+
 </html>
