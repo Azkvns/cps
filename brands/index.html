@@ -45,42 +45,43 @@
                 </li>
                 <li class="brands__item swiper-slide">
                     <button class="brands__button">
-                            <img src="./img/acer.png" class="brands__image"
-                                alt="логотип Acer"></button>
+                            <img src="./img/viewsonic.png" class="brands__image"
+                                alt="логотип ViewSonic">ViewSonic</button>
                 </li>
                 <li class="brands__item swiper-slide">
                     <button class="brands__button">
-                            <img src="./img/sony.png" class="brands__image"
-                                alt="логотип Sony">Sony</button>
+                            <img src="./img/acer.png" class="brands__image"
+                                alt="логотип Acer">Acer</button>
                 </li>
                 <li class="brands__item swiper-slide">
                     <button class="brands__button">
                             <img src="./img/viewsonic.png" class="brands__image"
-                                alt="логотип viewsonic">Viewsonic</button>
+                                alt="логотип ViewSonic">ViewSonic</button>
+                </li>
+                <li class="brands__item swiper-slide">
+                    <button class="brands__button">
+                            <img src="./img/lenovo.png" class="brands__image"
+                                alt="логотип Lenovo">Lenovo</button>
                 </li>
             </ul>
             <div class="swiper-pagination"></div>
         </div>
-        <button class="brands__button-more">Показать все</button>
+        <button class="button-more brands__button-more">Показать все</button>
     </section>
 
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <!-- <script src="./js/swiper.min.js"></script> -->
+    <script src="./js/swiper-settings.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            // spaceBetween: 16,
-            slidesPerView: 'auto',
+        // var swiper = new Swiper('.swiper-container', params);
 
-            freeMode: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+        // window.addEventListener('resize', function() {
+        //     if (window.outerWidth > 767) {
+        //         swiper.destroy(true, true);
+        //     }
+
+        //     console.log(!swiper);
+        // });
+
         // function addButton(evt) {
         //     console.log(evt);
         //     let brandsList = document.querySelector('.brands__list');
