@@ -83,8 +83,6 @@
     @media (min-width: 768px) {
         .services__list {
             padding: 24px 0 8px 24px;
-            height: 164px;
-            overflow: hidden;
         }
     }
     
@@ -92,10 +90,6 @@
         .services__list {
             padding: 24px 0 8px 32px;
         }
-    }
-    
-    .services__list--opened {
-        height: auto;
     }
     
     .services__item {
@@ -115,7 +109,19 @@
         }
     }
     
-    .services__button {
+    @media (min-width: 768px) and (max-width: 1119px) {
+        .services__item--not-ms {
+            position: absolute !important;
+            clip: rect(1px 1px 1px 1px);
+        }
+    }
+    
+    .services__item--hidden {
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+    }
+    
+    .services .services__button {
         display: flex;
         align-items: center;
         font-size: 0;
