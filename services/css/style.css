@@ -34,18 +34,18 @@
         margin-right: auto;
     }
     
-    .brands {
+    .services {
         background-color: #f8f8f8;
     }
     
-    .brands__header {
+    .services__header {
         display: block;
         background-image: linear-gradient(90deg, #f8f8f8, #FFFFFF);
         margin: 0;
         padding: 16px;
     }
     
-    .brands__title {
+    .services__title {
         font-size: 16px;
         line-height: 24px;
         text-transform: uppercase;
@@ -54,7 +54,7 @@
         margin: 0;
     }
     
-    .brands__list {
+    .services__list {
         display: flex;
         align-items: center;
         margin: 0;
@@ -62,18 +62,24 @@
     }
     
     @media (min-width: 768px) {
-        .brands__list {
+        .services__list {
             padding: 24px 24px 8px 24px;
             justify-content: space-evenly;
+            height: 164px;
+            overflow: hidden;
         }
     }
     
-    .brands__item {
+    .services__list--opened {
+        height: auto;
+    }
+    
+    .services__item {
         display: block;
         list-style: none;
     }
     
-    .brands__button {
+    .services__button {
         font-size: 0;
         position: relative;
         background-color: #fff;
@@ -89,22 +95,22 @@
     }
     
     @media (min-width: 768px) {
-        .brands__button {
+        .services__button {
             flex-basis: 224px;
         }
     }
     
     @media (min-width: 768px) and (max-width: 1119px) {
-        .brands__button {
+        .services__button {
             min-width: 224px;
         }
     }
     
-    .brands__image {
+    .services__image {
         display: block;
     }
     
-    .brands__button::after {
+    .services__button::after {
         content: "";
         position: absolute;
         width: 40px;
@@ -115,24 +121,24 @@
         transition: all 100ms ease-out;
     }
     
-    .brands__button:focus {
+    .services__button:focus {
         border-color: #ff3e79;
     }
     
-    .brands__button:hover {
+    .services__button:hover {
         border-color: #ff3e79;
         box-shadow: 0 0 4px 4px #80808044;
     }
     
-    .brands__button:active {
+    .services__button:active {
         box-shadow: 0 0 6px 4px #80808088;
     }
     
-    .brands__button:hover::after {
+    .services__button:hover::after {
         transform: scale(1.2);
     }
     
-    .brands__button:active::after {
+    .services__button:active::after {
         background-image: url("../img/go-fill.svg");
     }
     
@@ -153,12 +159,12 @@
         transition: all 0.3s ease-in-out;
     }
     
-    .brands__button-more {
+    .services__button-more {
         margin-left: 24px;
     }
     
     @media (min-width: 1120px) {
-        .brands__button-more {
+        .services__button-more {
             margin-left: 32px;
         }
     }
@@ -172,10 +178,6 @@
         left: 0;
         background: url("../img/expand.svg") 50% no-repeat;
         transition: all 0.5s ease-in-out;
-    }
-    
-    .button-more:hover::before {
-        transform: rotate(360deg) scale(1.5);
     }
     
     .button-more:hover {
@@ -192,8 +194,12 @@
         border: 2px solid #41F6D7;
     }
     
+    .button-more--active::before {
+        transform: scale(1.5) rotate(180deg);
+    }
+    
     @media (max-width: 767px) {
-        .brands__button-more {
+        .services__button-more {
             display: none;
         }
     }
@@ -234,16 +240,12 @@
     @media (min-width: 768px) {
         .swiper-wrapper {
             flex-wrap: wrap;
+            width: auto;
         }
         .swiper-slide {
             margin-bottom: 16px;
             width: auto;
+            height: auto;
             margin-left: 0;
-        }
-    }
-    
-    @media (min-width: 768px) and (max-width: 1119px) {
-        .swiper-slide {
-            width: 224px;
         }
     }

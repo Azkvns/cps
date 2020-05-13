@@ -37,7 +37,6 @@ const breakpointChecker = function() {
 const enableSwiper = function() {
 
     mySwiper = new Swiper('.swiper-container', {
-        // spaceBetween: 16,
         slidesPerView: 'auto',
 
         freeMode: true,
