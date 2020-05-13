@@ -90,10 +90,15 @@
     
     @media (min-width: 768px) {
         .services__list {
-            padding: 24px 24px 8px 24px;
-            justify-content: space-evenly;
+            padding: 24px 0 8px 24px;
             height: 164px;
             overflow: hidden;
+        }
+    }
+    
+    @media (min-width: 1120px) {
+        .services__list {
+            padding: 24px 0 8px 32px;
         }
     }
     
@@ -104,6 +109,18 @@
     .services__item {
         display: block;
         list-style: none;
+    }
+    
+    @media (min-width: 768px) {
+        .services__item {
+            margin-right: 24px;
+        }
+    }
+    
+    @media (min-width: 1120px) {
+        .services__item {
+            margin-right: 32px;
+        }
     }
     
     .services__button {
