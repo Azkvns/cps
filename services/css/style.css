@@ -61,6 +61,33 @@
         padding: 16px 0;
     }
     
+    .services__inner {
+        position: relative;
+    }
+    
+    @media (max-width: 767px) {
+        .services__inner::before {
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(to right, #F8F8F8, transparent);
+            width: 40px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .services__inner::after {
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(to left, #F8F8F8, transparent);
+            width: 40px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+    
     @media (min-width: 768px) {
         .services__list {
             padding: 24px 24px 8px 24px;
