@@ -110,18 +110,25 @@
     }
     
     @media (min-width: 768px) and (max-width: 1119px) {
-        .services__item--not-ms {
-            position: absolute !important;
+        .services__item:nth-of-type(n+7) {
+            position: absolute;
             clip: rect(1px 1px 1px 1px);
         }
     }
     
-    .services__item--hidden {
-        position: absolute !important;
-        clip: rect(1px 1px 1px 1px);
+    @media (min-width: 1120px) {
+        .services__item:nth-of-type(n+9) {
+            position: absolute;
+            clip: rect(1px 1px 1px 1px);
+        }
     }
     
-    .services .services__button {
+    .services__item--visible {
+        position: relative !important;
+        clip: auto !important;
+    }
+    
+    .services__button {
         display: flex;
         align-items: center;
         font-size: 0;
@@ -135,18 +142,12 @@
         cursor: pointer;
         outline: none;
         transition: all 100ms ease-in;
-        min-width: 240px;
-    }
-    
-    @media (min-width: 768px) {
-        .services__button {
-            flex-basis: 224px;
-        }
+        width: 240px;
     }
     
     @media (min-width: 768px) and (max-width: 1119px) {
         .services__button {
-            min-width: 224px;
+            width: 224px;
         }
     }
     
