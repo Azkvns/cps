@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webpack 4 Starter</title>
+    <title>CPS | Авторизованный сервисный центр</title>
 <link href="style.css" rel="stylesheet"></head>
-<body>
-<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-<h3>Welcome to Webpack 4 starter </h3>
+
+<body class="container">
+    <header class="header container__header">
+        <button class="top-btn top-btn--menu header__top-btn" title="Меню">Меню</button>
+        <span class="header__delimetr header__delimetr--left"></span>
+        <a href="#" class="logo header__logo">
+            <img src="./img/logo.svg" alt="CPS Ремонт техники Dell" class="logo_logo" title="CPS - Центр по ремонту техники" width="96"></a>
+        <div class="header__contacts">
+            <button class="top-btn top-btn--call header__top-btn" title="Заказать
+                    звонок">Заказать звонок</button>
+            <button class="top-btn top-btn--feedback header__top-btn" title="Обратная связь">Обратная связь</button>
+            <button class="top-btn top-btn--profile header__top-btn" title="Профиль">Профиль</button>
+        </div>
+        <span class="header__delimetr header__delimetr--right"></span>
+        <button class="top-btn top-btn--check header__top-btn" title="Статус
+                ремонта">Статус ремонта</button>
+        <button class="top-btn top-btn--request header__top-btn" title="Оставить заявку">Оставить заявку</button>
+    </header>
+    <section class="sub-header container__sub-header">
+        <h1 class="sub-header__title">Услуги и сервисы</h1>
+        <div class="sub-header__buttons">
+            <button class="wide-button wide-button--request sub-header__wide-button" title="Оставить заявку"><span class="wide-button__label">Оставить заявку</span>
+                </button>
+            <button class="wide-button wide-button--check sub-header__wide-button" title="Статус ремонта"><span class="wide-button__label">Статус ремонта</span>
+                </button>
+        </div>
+        <div class="sub-header__sub-nav-wrapper">
+            <ul class="sub-nav sub-header__sub-nav">
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Ремонтируемые
+                            бренды</a></li>
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Ремонтируемые
+                            устройства</a></li>
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Цены на услуги</a></li>
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Адреса сервисных
+                            центров</a></li>
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Специальные цены</a></li>
+                <li class="sub-nav__item">
+                    <a href="#" class="sub-nav__link">Отзывы</a></li>
+            </ul>
+        </div>
+    </section>
+    <main class="content">
+        <article class="card main-content__card">
+            <h2 class="card__title">О нашей компании</h2>
+            <div class="card__inner">
+                <p class="card__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                    <br><br> Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным
+                    и близким.
+                </p>
+                <button class="card__button">Читать далее</button>
+            </div>
+            <img src="./img/card-picture.jpg" alt="CPS логотип и часы
+                    работы
+                    офиса" width="532" class="card__picture">
+        </article>
+    </main>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
+
 </html>
