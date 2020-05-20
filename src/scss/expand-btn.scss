@@ -1,0 +1,44 @@
+.expand-btn {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    min-height: 24px;
+    padding: 4px 4px 4px 30px;
+    position: relative;
+    outline: none;
+    background-color: #FFFFFF00;
+    border: 2px solid #41F6D700;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    // 
+    &:hover {
+        background-color: #FFFFFF;
+        border: 2px solid #41F6D7;
+    }
+    &:focus {
+        border: 2px solid #41F6D7;
+    }
+    &:active {
+        background-color: #EEEEEE;
+        border: 2px solid #41F6D7;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 4px;
+        left: 0;
+        background: url("../img/expand.svg") 50% no-repeat;
+        transition: all 0.5s ease-in-out;
+    }
+    // 
+    &--active {
+        &::before {
+            transform: scale(1.5) rotate(180deg);
+        }
+    }
+}

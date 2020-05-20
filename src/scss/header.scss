@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    border-bottom: 1px solid #D9FFF5;
+    background-color: $background-header;
+    // 
+    @media (min-width: $screen-md) {
+        padding: 16px 16px;
+    }
+    @media (min-width: $screen-lg) {
+        display: none;
+    }
+    // 
+    &__top-btn {
+        margin: 8px;
+    }
+    &__delimetr {
+        min-height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+        width: 2px;
+        margin: 0 12px;
+        &--left {
+            @media (min-width: $screen-xs) {
+                display: none;
+            }
+            @media (min-width: $screen-md) {
+                display: block;
+            }
+        }
+    }
+    &__contacts {
+        display: none;
+        @media (min-width: $screen-md) {
+            display: block;
+        }
+    }
+    &__logo {
+        margin-right: auto;
+        margin-left: 8px;
+    }
+}

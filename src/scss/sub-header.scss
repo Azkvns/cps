@@ -1,0 +1,60 @@
+.sub-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 24px 0;
+    // 
+    @media (min-width: $screen-lg) {
+        padding: 0;
+    }
+    // 
+    &__title {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.6px;
+        margin: 0 auto 24px 16px;
+        position: relative;
+        // 
+        @media (min-width: $screen-md) {
+            margin: 0 auto 32px 24px;
+        }
+        @media (min-width: $screen-lg) {
+            margin-left: 32px;
+        }
+        // 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            left: -16px;
+            background-color: #41F6D7;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            // 
+            @media (min-width: $screen-md) {
+                left: -24px;
+            }
+            @media (min-width: $screen-lg) {
+                left: -32px;
+            }
+        }
+    }
+    &__buttons {
+        display: none;
+        padding-right: 32px;
+        // 
+        @media (min-width: $screen-lg) {
+            display: flex;
+        }
+    }
+    &__wide-btn {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+    &__sub-nav-wrapper {
+        width: 100vw;
+        position: relative;
+        margin: 0 -16px;
+    }
+}

@@ -1,0 +1,45 @@
+.top-btn {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 0;
+    background: #FF3E79 50% no-repeat;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    //  
+    &:hover {
+        background-color: #EE2D68;
+    }
+    &:active {
+        background-color: #DD1C57;
+    }
+    &:focus {
+        box-shadow: 0 0 2px 0 #555;
+    }
+    // 
+    &--call {
+        background-image: url("../img/call.svg");
+    }
+    &--feedback {
+        background-image: url("../img/feedback.svg");
+    }
+    &--profile {
+        background-image: url("../img/personal.svg");
+    }
+    &--check {
+        background-image: url("../img/check.svg");
+    }
+    &--request {
+        background-image: url("../img/request.svg");
+    }
+    &--menu {
+        background-image: url("../img/menu.svg");
+    }
+    &--search {
+        background-image: url("../img/search.svg");
+    }
+    &--close {
+        background-image: url("../img/close.svg");
+    }
+}

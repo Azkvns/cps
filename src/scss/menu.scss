@@ -1,0 +1,39 @@
+.menu {
+    height: 100vh;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    width: 100%;
+    max-width: 360px;
+    padding: 16px 24px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    box-sizing: border-box;
+    @media (min-width: $screen-lg) {
+        display: block;
+        box-shadow: unset;
+        max-width: $menu-screen-lg-width;
+    }
+    // 
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        flex-basis: 1024px;
+    }
+    &__menu-header {
+        margin-bottom: 32px;
+    }
+    &__logo {
+        box-sizing: border-box;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+}

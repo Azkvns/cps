@@ -1,0 +1,65 @@
+@import './srv-link/srv-link.scss';
+// 
+.services {
+    position: relative;
+    // 
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 16px 0;
+        // 
+        @media (min-width: $screen-md) {
+            padding: 24px 0 8px 24px;
+        }
+        @media (min-width: $screen-lg) {
+            padding: 24px 0 8px 32px;
+        }
+    }
+    &__item {
+        display: block;
+        list-style: none;
+        width: min-content;
+        margin-left: 16px;
+        // 
+        @media (min-width: $screen-md) {
+            margin-right: 24px;
+        }
+        @media (min-width: $screen-lg) {
+            margin-right: 32px;
+        }
+        // 
+        &:last-of-type {
+            margin-right: 16px;
+        }
+        &:nth-of-type(n+7) {
+            @media (min-width: $screen-md) {
+                position: absolute;
+                clip: rect(1px 1px 1px 1px);
+            }
+        }
+        &:nth-of-type(n+9) {
+            @media (min-width: $screen-lg) {
+                position: absolute;
+                clip: rect(1px 1px 1px 1px);
+            }
+        }
+        // 
+        &--visible {
+            position: relative !important;
+            clip: auto !important;
+        }
+    }
+    &__pagination {
+        position: static;
+        // 
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #DDDDDD;
+        }
+    }
+    &__expand-btn {
+        display: block;
+    }
+}

@@ -1,0 +1,60 @@
+.wide-btn {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    outline: none;
+    position: relative;
+    background-color: #FFFFFF00;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    padding: 2px 16px;
+    // 
+    &:focus {
+        text-decoration: 1px underline black;
+        // 
+        &::after {
+            box-shadow: 0 0 2px 0 #555;
+        }
+    }
+    &:hover {
+        text-decoration: 1px underline black;
+        // 
+        &::after {
+            background-color: #EE2D68;
+        }
+    }
+    &:active {
+        background-color: #DDDDDD;
+        // 
+        &::after {
+            background-color: #DD1C57;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        background-color: #FF3E79;
+        width: 40px;
+        height: 40px;
+        top: -8px;
+        right: -32px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    // 
+    &--check {
+        &::after {
+            background-image: url("../img/check.svg");
+        }
+    }
+    &--request {
+        &::after {
+            background-image: url("../img/request.svg");
+        }
+    }
+}

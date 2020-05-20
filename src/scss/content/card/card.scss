@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // 
+    @media (min-width: $screen-md) {
+        padding: 0 24px;
+    }
+    @media (min-width: $screen-lg) {
+        padding: 0 32px;
+    }
+    // 
+    &__title {
+        font-size: 0;
+    }
+    &__text-wrapper {
+        padding: 0 16px;
+        margin-bottom: 16px;
+        flex-grow: 1;
+        // 
+        @media (min-width: $screen-md) {
+            flex-basis: 312px;
+            padding-left: 0;
+        }
+        @media (min-width: $screen-lg) {
+            flex-basis: 490px;
+            padding: 0;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        margin: 0;
+        max-height: 6rem;
+        overflow: hidden;
+        // 
+        @media (min-width: $screen-md) {
+            margin-bottom: 10px;
+            max-height: 8rem;
+        }
+        @media (min-width: $screen-lg) {
+            max-height: 9rem;
+            margin-right: 36px;
+            margin-bottom: 12px;
+        }
+    }
+    &__picture {
+        max-width: 100%;
+        // 
+        @media (min-width: $screen-md) {
+            max-width: 50%;
+            border-radius: 6px;
+        }
+        @media (min-width: $screen-lg) {
+            max-width: 532px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import './card/card.scss';
+@import './section/section.scss';
+@import './offer/offer.scss';
+.content {
+    margin-bottom: 56px;
+    // 
+    &__card {
+        margin-bottom: 24px;
+    }
+    &__section {
+        margin-bottom: 24px;
+    }
+}

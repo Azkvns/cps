@@ -1,0 +1,16 @@
+.container {
+    margin: auto;
+    background-color: $background-container;
+    max-width: $screen-xl;
+    // position: relative;
+    overflow-x: hidden;
+    @media (min-width: $screen-lg) {
+        padding-top: 40px;
+    }
+    @media (min-width: $screen-lg) {
+        padding-left: $menu-screen-lg-width;
+        // display: grid;
+        // grid-template-columns: min-content 1fr;
+        // grid-template-areas: "menu sub-nav" "menu content";
+    }
+}

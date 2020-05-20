@@ -1,9 +1,17 @@
+import Swiper from 'swiper';
+import '../scss/style.scss';
+
 // breakpoint where swiper will be destroyed
 // and switches to a dual-column layout
-const breakpoint = window.matchMedia('(min-width:768px)');
+const breakpoint = window.matchMedia('(min-width:1366px)');
 
 // keep track of swiper instances to destroy later
-let mySwiper;
+let subNavSwiper;
+let servicesBrandsSwiper;
+let servicesServicesSwiper;
+let servicesPriceSwiper;
+
+
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
@@ -36,7 +44,14 @@ const breakpointChecker = function() {
 
 const enableSwiper = function() {
 
-    mySwiper = new Swiper('.swiper-container', {
+    subNavSwiper = new Swiper('.sub-header__sub-nav-wrapper', {
+        slidesPerView: 'auto',
+
+        freeMode: true,
+    });
+
+
+    servicesBrandsSwiper = new Swiper('.services--brands', {
         slidesPerView: 'auto',
 
         freeMode: true,
@@ -51,14 +66,44 @@ const enableSwiper = function() {
 
     });
 
+    servicesServicesSwiper = new Swiper('.services--tech', {
+        slidesPerView: 'auto',
+
+        freeMode: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    });
+
+    servicesPriceSwiper = new Swiper('.services--price', {
+        slidesPerView: 'auto',
+
+        freeMode: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    });
 };
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
+export default function initSwiper() {
+    // keep an eye on viewport size changes
+    breakpoint.addListener(breakpointChecker);
 
-// keep an eye on viewport size changes
-breakpoint.addListener(breakpointChecker);
-
-// kickstart
-breakpointChecker();
+    // kickstart
+    breakpointChecker();
+}
