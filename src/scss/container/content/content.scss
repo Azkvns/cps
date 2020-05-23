@@ -1,11 +1,17 @@
-@import './card/card.scss';
 @import './section/section.scss';
 @import './offer/offer.scss';
 .content {
     margin-bottom: 56px;
     // 
-    &__card {
+    &__about {
         margin-bottom: 24px;
+        // 
+        @media (min-width: $screen-md) {
+            margin-bottom: 32px;
+        }
+        @media (min-width: $screen-lm) {
+            margin-bottom: 52px;
+        }
     }
     &__section {
         margin-bottom: 24px;

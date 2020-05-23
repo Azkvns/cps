@@ -50,41 +50,6 @@
         font-size: 0;
         align-self: flex-end;
     }
-    &__text-button {
-        position: absolute;
-        width: 119px;
-        height: 32px;
-        bottom: 16px;
-        right: 16px;
-        background: #FF3E79 url("../img/go-fill.svg") no-repeat 98%;
-        background-size: 32px 32px;
-        border-radius: 16px;
-        transition: all 100ms ease-out;
-        font-size: 12px;
-        line-height: 24px;
-        letter-spacing: -0.15px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        font-weight: 900;
-        padding: 4px 12px;
-        box-sizing: border-box;
-        align-self: flex-end;
-    }
-    &__caption {
-        color: #7E7E82;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 4px;
-    }
-    &__text {
-        display: block;
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        margin-top: 0px;
-        margin-bottom: 16px;
-    }
-    // 
     &--tall {
         font-size: 16px;
         text-decoration: none;
@@ -92,22 +57,5 @@
         min-height: 160px;
         align-items: flex-start;
         padding: 16px;
-    }
-    &--text {
-        font-size: 16px;
-        font-weight: 300;
-        text-decoration: none;
-        color: #000000;
-        align-items: flex-start;
-        min-height: 200px;
-        width: 260px;
-        padding: 16px;
-        flex-direction: column;
-        // 
-        &:hover {
-            .srv-link__text-button {
-                transform: scale(1.1);
-            }
-        }
     }
 }

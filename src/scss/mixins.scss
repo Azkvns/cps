@@ -1,0 +1,16 @@
+@mixin visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    pointer-events: none;
+}
+
+.visually-visible {
+    position: static !important;
+    clip: auto !important;
+    pointer-events: auto !important;
+}
+
+.expand {
+    overflow: visible !important;
+    max-height: unset !important;
+}

@@ -1,7 +1,10 @@
-.card {
+@import './expand-btn/expand-btn.scss';
+// 
+.about {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     // 
     @media (min-width: $screen-md) {
         padding: 0 24px;
@@ -30,7 +33,7 @@
     &__text {
         font-size: 14px;
         font-weight: 300;
-        line-height: 18px;
+        line-height: 16px;
         letter-spacing: 0.2px;
         margin: 0;
         max-height: 6rem;

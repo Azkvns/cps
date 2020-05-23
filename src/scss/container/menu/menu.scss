@@ -1,3 +1,7 @@
+@import './menu-header/menu-header.scss';
+@import './nav/nav.scss';
+@import './menu-footer/menu-footer.scss';
+// 
 .menu {
     height: 100vh;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);

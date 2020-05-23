@@ -1,11 +1,13 @@
 import initSwiper from './swiper-settings';
-// import 'normalize.css';
+import services from '../scss/container/content/section/services/services';
+import about from '../scss/container/sub-header/about/about';
 
-initSwiper();
 
-// window.addEventListener('DOMContentLoaded', function() {
-//     var swiper = new Swiper('.swiper-container');
-// });
+window.addEventListener('DOMContentLoaded', function() {
+    initSwiper();
+    about();
+    services();
+});
 
 
 console.log('Works!');

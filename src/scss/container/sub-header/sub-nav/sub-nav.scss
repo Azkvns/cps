@@ -28,6 +28,10 @@
     &__item {
         width: min-content;
         list-style: none;
+        // 
+        *:first-of-type {
+            margin-left: 16px;
+        }
     }
     &__link {
         display: block;

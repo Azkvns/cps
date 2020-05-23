@@ -1,0 +1,95 @@
+@import './price-link/price-link.scss';
+// 
+.price {
+    position: relative;
+    // 
+    @media (min-width: $screen-md) {
+        padding: 16px 24px;
+    }
+    @media (min-width: $screen-lg) {
+        padding: 16px 32px;
+    }
+    // 
+    &__head {
+        display: none;
+        // 
+        @media (min-width: $screen-md) {
+            padding: 16px;
+            display: flex;
+        }
+    }
+    &__caption {
+        color: #7E7E82;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+    &__service {
+        flex-basis: 50%;
+    }
+    &__cost {
+        flex-basis: 15%;
+    }
+    &__caption {
+        flex-basis: 15%;
+    }
+    &__list {
+        display: flex;
+        align-items: stretch;
+        margin: 0;
+        padding: 16px 0;
+        // 
+        @media (min-width: $screen-md) {
+            flex-direction: column;
+            width: auto;
+            background-color: #fff;
+            box-sizing: border-box;
+            align-items: unset;
+            padding: 0 16px;
+            border-radius: 6px;
+        }
+    }
+    &__item {
+        display: block;
+        list-style: none;
+        width: min-content;
+        margin-left: 16px;
+        height: auto;
+        // 
+        @media (min-width: $screen-md) {
+            width: auto;
+            margin-left: 0;
+            // 
+        }
+        // 
+        &:last-of-type {
+            .price-link {
+                @media (min-width: $screen-md) {
+                    border-bottom: unset;
+                }
+            }
+        }
+    }
+    // 
+    &:last-of-type {
+        margin-right: 16px;
+        // 
+        @media (min-width: $screen-md) {
+            margin-right: 0;
+        }
+    }
+    &__pagination {
+        position: static;
+        //
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+        //  
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #DDDDDD;
+        }
+    }
+}

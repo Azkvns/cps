@@ -1,0 +1,100 @@
+@import './srv-link/srv-link.scss';
+@import './expand-btn/expand-btn.scss';
+// 
+.services {
+    position: relative;
+    // 
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 16px 0;
+        // 
+        @media (min-width: $screen-md) {
+            padding: 24px 0 24px 24px;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+        @media (min-width: $screen-lg) {
+            padding: 24px 0 24px 32px;
+        }
+        // 
+        &--tech {
+            .services__item {
+                @media (min-width: $screen-md) and (max-width: $screen-lm - 1) {
+                    &:nth-of-type(n+4) {
+                        @include visually-hidden;
+                    }
+                }
+                @media (min-width: $screen-lm) {
+                    &:nth-of-type(n+5) {
+                        @include visually-hidden;
+                    }
+                }
+            }
+        }
+        &--brands {
+            .services__item {
+                @media (min-width: $screen-md) and (max-width: $screen-lm - 1) {
+                    &:nth-of-type(n+7) {
+                        @include visually-hidden;
+                    }
+                }
+                @media (min-width: $screen-lm) {
+                    &:nth-of-type(n+9) {
+                        @include visually-hidden;
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        display: block;
+        list-style: none;
+        width: min-content;
+        margin-left: 16px;
+        // 
+        @media (min-width: $screen-md) {
+            margin: 0 24px 16px 0;
+        }
+        @media (min-width: $screen-lg) {
+            margin: 0 32px 16px 0;
+        }
+        // 
+        &:last-of-type {
+            margin-right: 16px;
+        }
+        // 
+        &--visible {
+            position: relative !important;
+            clip: auto !important;
+        }
+    }
+    &__pagination {
+        position: static;
+        //
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+        //  
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #DDDDDD;
+        }
+    }
+    &__expand-btn {
+        display: none;
+        // 
+        @media (min-width: $screen-md) {
+            display: block;
+            margin-left: 24px;
+        }
+        @media (min-width: $screen-md) {
+            margin-left: 32px;
+        }
+    }
+    // 
+}
