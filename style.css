@@ -1069,6 +1069,7 @@ template {
 .modal {
   display: flex;
   position: fixed;
+  overflow: auto;
   height: 100%;
   padding: 24px 16px;
   right: 0;
