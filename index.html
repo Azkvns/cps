@@ -80,11 +80,11 @@
     <div class="modal modal--feedback modal--hidden">
         <button class="top-btn top-btn--close modal__top-btn--close" title="Закрыть">Закрыть</button>
         <h2 class="modal__title">Обратная связь</h2>
-        <form class="form" name="feedback" action="POST">
-            <input class="input form__input" type="text" name="name" placeholder="Имя">
-            <input class="input form__input" type="tel" name="tel" placeholder="Телефон">
-            <input class="input form__input" type="email" name="email" placeholder="Электронная почта">
-            <textarea class="input form__input" name="message" placeholder="Сообщение" cols="20" rows="10"></textarea>
+        <form class="form" action="#" name="feedback" action="POST" enctype="multipart/form-data">
+            <input class="input form__input" type="text" name="name" placeholder="Имя" autocomplete="on" required>
+            <input class="input form__input" type="tel" name="tel" placeholder="Телефон" autocomplete="on" required>
+            <input class="input form__input" type="email" name="email" placeholder="Электронная почта" autocomplete="on" required>
+            <textarea class="input form__input" name="message" placeholder="Сообщение" cols="20" rows="10" required></textarea>
             <p class="form__policy">Нажимая “отправить”, вы даете согласие на <a href="" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="form__link">политикой конфиденциальности</a></p>
             <input class="form__button" type="submit" value="Отправить ">
         </form>
@@ -93,7 +93,7 @@
         <button class="top-btn top-btn--close modal__top-btn--close" title="Закрыть ">Закрыть</button>
         <h2 class="modal__title">Заказать звонок</h2>
         <form class="form" action="POST">
-            <input class="input form__input" type="tel" name="tel" placeholder="Телефон">
+            <input class="input form__input" type="tel" name="tel" placeholder="Телефон" autocomplete="on" required>
             <p class="form__policy">Нажимая “отправить”, вы даете согласие на <a href="">обработку персональных данных</a> и соглашаетесь с нашей <a href="">политикой конфиденциальности</a></p>
             <input class="form__button" type="submit" value="Отправить ">
         </form>

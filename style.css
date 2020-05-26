@@ -954,6 +954,7 @@ template {
 .menu {
   display: block;
   position: fixed;
+  overflow: auto;
   max-width: 360px;
   width: 100%;
   top: 0;
