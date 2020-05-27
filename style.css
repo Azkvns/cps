@@ -771,6 +771,8 @@ template {
     font-weight: 500;
     color: #1B1C21;
     text-decoration: none; }
+    .offer__link:hover {
+      text-decoration: underline; }
     .offer__link .offer__button {
       display: inline-block;
       width: 24px;
