@@ -1,6 +1,7 @@
 .header {
     display: flex;
     align-items: center;
+    grid-area: header;
     padding: 16px 8px;
     border-bottom: 1px solid #D9FFF5;
     background-color: $background-header;

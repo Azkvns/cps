@@ -2,15 +2,37 @@
     position: absolute;
     clip: rect(1px 1px 1px 1px);
     pointer-events: none;
+    opacity: 0;
 }
 
-.visually-visible {
+@mixin lightening {
+    filter: blur(5px);
+    overflow: hidden;
+    // position: fixed !important;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        filter: opacity(0.6);
+        overflow: hidden;
+    }
+}
+
+.unselect {
+    user-select: none;
+}
+
+@mixin visually-visible {
     position: static !important;
     clip: auto !important;
     pointer-events: auto !important;
+    opacity: 1 !important;
 }
 
-.expand {
+@mixin expand {
     overflow: visible !important;
     max-height: unset !important;
 }

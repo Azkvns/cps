@@ -18,12 +18,13 @@
         letter-spacing: -0.6px;
         margin: 0 auto 24px 16px;
         position: relative;
+        grid-area: sub-header;
         // 
         @media (min-width: $screen-md) {
             margin: 0 auto 32px 24px;
         }
         @media (min-width: $screen-lg) {
-            margin-left: 32px;
+            margin: 0 auto 8px 32px;
         }
         // 
         &::before {
@@ -59,6 +60,18 @@
     &__container {
         width: 100vw;
         position: relative;
-        margin: 0 -16px;
+        margin: 0;
+        @media (min-width: $screen-md) {
+            margin-left: 8px;
+        }
+        @media (min-width: $screen-lg) {
+            margin-left: 16px;
+            margin-bottom: 12px;
+        }
+    }
+    &__sub-nav {
+        @media (min-width: $screen-lm) {
+            margin: 0 auto;
+        }
     }
 }

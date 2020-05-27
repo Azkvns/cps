@@ -2,5 +2,38 @@
 @import './top-btn/top-btn.scss';
 // 
 .menu-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     // 
+    &__top-btn {
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4vh;
+    }
+    &__mail {
+        text-decoration: none;
+        color: black;
+        margin-right: auto;
+        flex-basis: 100%;
+        margin-bottom: 12px;
+    }
+    &__tel {
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        font-weight: bold;
+        margin-right: auto;
+        flex-basis: 100%;
+    }
+    &__lang-list {
+        padding: 0;
+        margin: 0;
+    }
 }

@@ -38,11 +38,15 @@
                 display: inline-block;
                 width: 5px;
                 height: 32px;
+                left: -10px;
                 top: 11px;
-                left: -18px;
                 background-color: #41F6D7;
                 border-bottom-right-radius: 10px;
                 border-top-right-radius: 10px;
+                // 
+                @media (min-width: $screen-md) {
+                    left: -18px;
+                }
             }
         }
     }

@@ -6,6 +6,7 @@
     padding: 0 16px;
     font-size: 14px;
     line-height: 16px;
+    grid-area: footer;
     // 
     @media (min-width: $screen-md) {
         flex-direction: row;

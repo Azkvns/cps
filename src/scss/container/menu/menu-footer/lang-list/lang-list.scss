@@ -1,0 +1,19 @@
+.lang-list {
+    display: flex;
+    list-style: none;
+    // 
+    &__item {
+        margin-right: 8px;
+    }
+    &__link {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &__link--active {
+        color: #7E7E82;
+    }
+    &__link:hover {
+        color: #41F6D7;
+    }
+}

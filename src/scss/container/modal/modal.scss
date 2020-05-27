@@ -1,0 +1,61 @@
+@import './top-btn/top-btn.scss';
+@import './form/form.scss';
+// 
+.modal {
+    display: flex;
+    position: absolute;
+    overflow: auto;
+    height: 100%;
+    padding: 24px 16px;
+    right: 0;
+    z-index: 10;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 440px;
+    box-sizing: border-box;
+    box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.2), 2px 0px 4px rgba(69, 79, 126, 0.02);
+    // 
+    @media (min-width: $screen-md) {
+        padding: 40px 32px;
+        overflow: unset;
+    }
+    // 
+    &__top-btn--close {
+        margin-bottom: 40px;
+        // 
+        @media (min-width: $screen-md) {
+            position: absolute;
+            left: -65px;
+            top: 32px;
+        }
+    }
+    &__title {
+        margin: 0;
+        position: relative;
+        margin-bottom: 24px;
+        // 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            top: -8px;
+            left: -16px;
+            background-color: #41F6D7;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            // 
+            @media (min-width: $screen-md) {
+                left: -32px;
+            }
+        }
+    }
+    // 
+    &--hidden {
+        @include visually-hidden;
+    }
+    &--lightening {
+        @include lightening;
+    }
+}

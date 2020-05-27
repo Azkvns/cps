@@ -4,4 +4,14 @@
 .menu-header {
     display: flex;
     align-items: center;
+    // 
+    &__top-btn--close {
+        margin-right: 16px;
+        @media (min-width: $screen-lg) {
+            display: none;
+        }
+    }
+    &__logo {
+        margin-right: auto;
+    }
 }

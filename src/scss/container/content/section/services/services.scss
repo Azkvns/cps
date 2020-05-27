@@ -23,12 +23,13 @@
         // 
         &--tech {
             .services__item {
-                @media (min-width: $screen-md) and (max-width: $screen-lm - 1) {
+                @media (min-width: $screen-md) and (max-width: $screen-lm - 1), (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
                     &:nth-of-type(n+4) {
                         @include visually-hidden;
                     }
                 }
-                @media (min-width: $screen-lm) {
+                @media (min-width: $screen-lm) and (max-width: $screen-lg - 1),
+                (min-width: $screen-xl) {
                     &:nth-of-type(n+5) {
                         @include visually-hidden;
                     }
@@ -37,12 +38,13 @@
         }
         &--brands {
             .services__item {
-                @media (min-width: $screen-md) and (max-width: $screen-lm - 1) {
+                @media (min-width: $screen-md) and (max-width: $screen-lm - 1), (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
                     &:nth-of-type(n+7) {
                         @include visually-hidden;
                     }
                 }
-                @media (min-width: $screen-lm) {
+                @media (min-width: $screen-lm) and (max-width: $screen-lg - 1),
+                (min-width: $screen-xl) {
                     &:nth-of-type(n+9) {
                         @include visually-hidden;
                     }
@@ -68,8 +70,7 @@
         }
         // 
         &--visible {
-            position: relative !important;
-            clip: auto !important;
+            @include visually-visible;
         }
     }
     &__pagination {

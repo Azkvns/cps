@@ -1,19 +1,33 @@
 @import './content/content.scss';
 @import './menu/menu.scss';
+@import './modal/modal.scss';
 @import './header/header.scss';
 @import './sub-header/sub-header.scss';
 @import './footer/footer.scss';
 // 
 .container {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: $background-container;
     max-width: $screen-xl;
-    // position: relative;
-    overflow-x: hidden;
+    position: relative;
     @media (min-width: $screen-lg) {
-        padding-top: 40px;
+        display: flex;
+        align-items: stretch;
     }
-    @media (min-width: $screen-lg) {
-        padding-left: $menu-screen-lg-width;
+    // 
+    &__inner {
+        position: relative;
+        transition: all 500ms ease-in-out;
+        // 
+        @media (min-width: $screen-lg) {
+            padding-top: 40px;
+            max-width: 1120px;
+            overflow: hidden;
+        }
+        // 
+        &--lightening {
+            @include lightening;
+        }
     }
 }

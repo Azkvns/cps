@@ -4,8 +4,8 @@ import '../scss/style.scss';
 let swipersData = {
     subNavSwiper: {
         swiperVar: undefined,
-        breakpoint: '(min-width: 1366px)',
-        swiperID: '.sub-header__sub-nav-wrapper',
+        breakpoint: '(min-width: 1120px)',
+        swiperID: '.sub-header__container',
         params: {
             slidesPerView: 'auto',
             freeMode: true,

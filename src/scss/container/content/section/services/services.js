@@ -1,6 +1,8 @@
 let serviceItems = document.querySelectorAll('.services__item');
 const screenMdBreakpoint = window.matchMedia('(min-width: 768px)');
 const screenLmBreakpoint = window.matchMedia('(min-width: 1120px)');
+let servicesButtons = document.querySelectorAll('.services__expand-btn');
+let defaultBtnText = servicesButtons[0].textContent;
 
 function toggleTabIndex(items) {
     return function() {
@@ -14,16 +16,23 @@ function toggleTabIndex(items) {
     }
 }
 
-let servicesButtons = document.querySelectorAll('.services__expand-btn');
-
-
-function showAllItems(items) {
+function showAllItems(items, btn) {
     return function() {
         for (let item of items) {
-            item.classList.toggle('visually-visible');
+            item.classList.toggle('services__item--visible');
+        }
+        btn.classList.toggle('expand-btn--active');
+        if (btn.textContent === defaultBtnText) {
+            btn.textContent = btn.dataset.active_text;
+        } else {
+            btn.textContent = defaultBtnText;
         }
         toggleTabIndex(items)();
     }
+}
+
+export function repairTabIndex() {
+    toggleTabIndex(serviceItems)();
 }
 
 export default function services() {
@@ -33,6 +42,6 @@ export default function services() {
     // 
     for (let btn of servicesButtons) {
         let items = btn.parentElement.querySelectorAll('.services__list .services__item');
-        btn.addEventListener('click', showAllItems(items));
+        btn.addEventListener('click', showAllItems(items, btn));
     }
 }

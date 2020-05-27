@@ -26,7 +26,7 @@
             padding-left: 0;
         }
         @media (min-width: $screen-lg) {
-            flex-basis: 490px;
+            flex-basis: 460px;
             padding: 0;
         }
     }
@@ -38,6 +38,8 @@
         margin: 0;
         max-height: 6rem;
         overflow: hidden;
+        position: relative;
+        transition: all 5s cubic-bezier(0, 1, 0, 1);
         // 
         @media (min-width: $screen-md) {
             margin-bottom: 10px;
@@ -47,6 +49,10 @@
             max-height: 9rem;
             margin-right: 36px;
             margin-bottom: 12px;
+        }
+        // 
+        &--expand {
+            @include expand;
         }
     }
     &__picture {
