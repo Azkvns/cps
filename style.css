@@ -382,9 +382,11 @@ template {
   font-weight: 300;
   font-style: normal; }
 
-.expand {
-  overflow: visible !important;
-  max-height: unset !important; }
+.unselect {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .page {
   font-family: "TT Lakes", sans-serif;
@@ -1064,7 +1066,8 @@ template {
     font-weight: 900;
     padding: 4px 40px 4px 12px;
     box-sizing: border-box;
-    align-self: flex-end; }
+    align-self: flex-end;
+    cursor: pointer; }
 
 .modal {
   display: flex;
@@ -1114,7 +1117,8 @@ template {
     opacity: 0; }
   .modal--lightening {
     -webkit-filter: blur(5px);
-            filter: blur(5px); }
+            filter: blur(5px);
+    position: fixed !important; }
     .modal--lightening::before {
       content: '';
       position: absolute;
@@ -1123,7 +1127,8 @@ template {
       height: 100%;
       background-color: #ffffff;
       -webkit-filter: opacity(0.6);
-              filter: opacity(0.6); }
+              filter: opacity(0.6);
+      overflow: hidden; }
 
 .header {
   display: flex;
@@ -1324,7 +1329,9 @@ template {
     letter-spacing: 0.2px;
     margin: 0;
     max-height: 6rem;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative;
+    transition: all 5s cubic-bezier(0, 1, 0, 1); }
     @media (min-width: 768px) {
       .about__text {
         margin-bottom: 10px;
@@ -1334,6 +1341,9 @@ template {
         max-height: 9rem;
         margin-right: 36px;
         margin-bottom: 12px; } }
+    .about__text--expand {
+      overflow: visible !important;
+      max-height: unset !important; }
   .about__picture {
     max-width: 100%; }
     @media (min-width: 768px) {
@@ -1454,7 +1464,8 @@ template {
         overflow: hidden; } }
     .container__inner--lightening {
       -webkit-filter: blur(5px);
-              filter: blur(5px); }
+              filter: blur(5px);
+      position: fixed !important; }
       .container__inner--lightening::before {
         content: '';
         position: absolute;
@@ -1463,7 +1474,8 @@ template {
         height: 100%;
         background-color: #ffffff;
         -webkit-filter: opacity(0.6);
-                filter: opacity(0.6); }
+                filter: opacity(0.6);
+        overflow: hidden; }
 
 
 /*# sourceMappingURL=style.css.map*/
