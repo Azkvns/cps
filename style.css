@@ -1321,8 +1321,7 @@ template {
     margin: 0;
     max-height: 6rem;
     overflow: hidden;
-    position: relative;
-    transition: all 5s cubic-bezier(0, 1, 0, 1); }
+    position: relative; }
     @media (min-width: 768px) {
       .about__text {
         margin-bottom: 10px;
