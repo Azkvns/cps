@@ -11,6 +11,3 @@ window.addEventListener('DOMContentLoaded', function() {
     services();
     modal();
 });
-
-
-console.log('Works!');
