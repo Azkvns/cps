@@ -965,13 +965,15 @@ template {
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
   background-color: #fff;
   z-index: 10;
-  padding: 24px 16px; }
+  padding: 24px 16px;
+  height: 100%; }
   @media (min-width: 361px) {
     .menu {
       max-width: 320px; } }
   @media (min-width: 768px) {
     .menu {
-      padding: 24px; } }
+      padding: 24px;
+      height: auto; } }
   @media (min-width: 1366px) {
     .menu {
       position: static;
@@ -1071,7 +1073,7 @@ template {
 
 .modal {
   display: flex;
-  position: fixed;
+  position: absolute;
   overflow: auto;
   height: 100%;
   padding: 24px 16px;
@@ -1085,7 +1087,8 @@ template {
   box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.2), 2px 0px 4px rgba(69, 79, 126, 0.02); }
   @media (min-width: 768px) {
     .modal {
-      padding: 40px 32px; } }
+      padding: 40px 32px;
+      overflow: unset; } }
   .modal__top-btn--close {
     margin-bottom: 40px; }
     @media (min-width: 768px) {
@@ -1117,7 +1120,8 @@ template {
     opacity: 0; }
   .modal--lightening {
     -webkit-filter: blur(5px);
-            filter: blur(5px); }
+            filter: blur(5px);
+    overflow: hidden; }
     .modal--lightening::before {
       content: '';
       position: absolute;
@@ -1448,7 +1452,8 @@ template {
   margin-left: auto;
   margin-right: auto;
   background-color: #F8F8F8;
-  max-width: 1440px; }
+  max-width: 1440px;
+  position: relative; }
   @media (min-width: 1366px) {
     .container {
       display: flex;
@@ -1463,7 +1468,8 @@ template {
         overflow: hidden; } }
     .container__inner--lightening {
       -webkit-filter: blur(5px);
-              filter: blur(5px); }
+              filter: blur(5px);
+      overflow: hidden; }
       .container__inner--lightening::before {
         content: '';
         position: absolute;
