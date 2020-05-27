@@ -8,7 +8,6 @@
 @mixin lightening {
     filter: blur(5px);
     overflow: hidden;
-    // position: fixed !important;
     &::before {
         content: '';
         position: absolute;
