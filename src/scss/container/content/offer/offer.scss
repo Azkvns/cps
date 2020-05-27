@@ -26,6 +26,10 @@
         color: #1B1C21;
         text-decoration: none;
         // 
+        &:hover {
+            text-decoration: underline;
+        }
+        // 
         .offer__button {
             display: inline-block;
             width: 24px;
