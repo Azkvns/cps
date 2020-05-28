@@ -412,11 +412,11 @@
         </div>
     </div>
     <div class="modal modal--call modal--hidden">
+        <button class="main-btn main-btn--close modal__main-btn--close" title="Закрыть">Закрыть</button>
         <div class="modal__content-wrapper">
-            <button class="main-btn main-btn--close modal__main-btn--close" title="Закрыть">Закрыть</button>
             <h2 class="modal__title">Заказать звонок</h2>
             <form class="form" name="modalCall" action="POST" enctype="multipart/form-data">
-                <input class="input form__input" type="tel" name="tel" placeholder="Телефон" autocomplete="on" required>
+                <input class="input form__input" type="tel" name="tel" placeholder="Телефон" autocomplete="on" required tabindex="10">
                 <p class="form__policy">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку
                             персональных
                             данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
