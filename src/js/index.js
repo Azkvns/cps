@@ -1,8 +1,8 @@
 import initSwiper from './swiper-settings';
-import services from '../scss/container/content/section/services/services';
-import about from '../scss/container/sub-header/about/about';
-import menu from '../scss/container/menu/menu';
-import modal from '../scss/container/modal/modal';
+import services from './services';
+import about from './about';
+import menu from './menu';
+import modal from './modal';
 
 window.addEventListener('DOMContentLoaded', function() {
     initSwiper();

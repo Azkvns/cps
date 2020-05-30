@@ -1,6 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 24px;
     &__input {
         margin-bottom: 16px;
         border: 1px solid #EAEAEA;

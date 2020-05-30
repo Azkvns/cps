@@ -5,5 +5,38 @@
 @import './mixins.scss';
 @import './variables.scss';
 // Page
-@import './page.scss';
-@import './container/container.scss';
+@import './container.scss';
+// menu
+@import './menu.scss';
+@import './menu-header.scss';
+@import './nav.scss';
+@import './menu-footer.scss';
+@import './lang-list.scss';
+// header
+@import './header.scss';
+@import './main-btn.scss';
+@import './logo.scss';
+// sub-header
+@import './sub-header.scss';
+@import './sub-nav.scss';
+@import './wide-btn.scss';
+// content
+@import './content.scss';
+@import './about.scss';
+@import './expand-btn.scss';
+@import './section.scss';
+@import './services.scss';
+@import './srv-link.scss';
+@import './price.scss';
+@import './price-link.scss';
+@import './offer.scss';
+// footer
+@import './footer.scss';
+// modal
+@import './modal.scss';
+@import './form.scss';
+// 
+html {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+}

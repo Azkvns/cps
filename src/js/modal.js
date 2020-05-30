@@ -1,84 +1,73 @@
-import { repairTabIndex } from '../content/section/services/services';
-
+import { closeMenu } from './menu';
+// 
 let modalFeedback = document.querySelector('.modal--feedback');
 let modalCall = document.querySelector('.modal--call');
-let feedbackBtns = document.querySelectorAll('.top-btn--feedback');
-let callBtns = document.querySelectorAll('.top-btn--call');
-let closeBtns = document.querySelectorAll('.modal__top-btn--close');
+let feedbackBtns = document.querySelectorAll('.main-btn--feedback');
+let callBtns = document.querySelectorAll('.main-btn--call');
+let closeBtns = document.querySelectorAll('.modal__main-btn--close');
 let containerInner = document.querySelector('.container__inner');
 let container = document.querySelector('.container');
 let menu = document.querySelector('.menu');
+let menuIsOpened = false;
 
-function makeSilence(elem, self) {
-    if (elem === self) return;
-    elem.classList.add('unselect');
-    elem.tabIndex = -1;
-    if (!elem.children) return;
-    for (let child of elem.children) {
-        makeSilence(child, self);
-    }
-}
-
-function dropSilence(elem) {
-    elem.classList.remove('unselect');
-    elem.removeAttribute('tabindex');
-    if (!elem.children) return;
-    for (let child of elem.children) {
-        dropSilence(child);
-    }
-}
-
-function openModal(modal) {
+function openModal(modal, btn) {
     return function() {
+        if (modal.classList.contains('modal--opened')) return;
+        if (menuIsOpened) return;
+        // btn.setAttribute('disabled', '');
+        setTimeout(function() {}, 10);
+        window.scrollBy(0, document.documentElement.scrollTop * -1);
         modal.classList.remove('modal--hidden');
-        modal.animate([
-            { transform: 'translateX(100%)' },
-            { transform: 'translateX(0)' }
-        ], 100);
+        setTimeout(function() { modal.classList.add('modal--opened'); }, 0);
+        menu.classList.remove('menu--opened');
+        setTimeout(function() { menu.classList.add('menu--hidden'); }, 300);
         menu.classList.add('modal--lightening');
         containerInner.classList.add('container__inner--lightening');
-        for (let child of container.children) {
-            makeSilence(child, modal);
-        }
+        container.style.overflow = 'hidden';
+        setTimeout(function() {
+            // btn.removeAttribute('disabled');
+            menuIsOpened = true;
+        }, 600);
     }
 }
 
 
-function closeModal(modal) {
+function closeModal(modal, btn) {
     return function() {
         if (modal.classList.contains('modal--hidden')) return;
+        if (!menuIsOpened) return;
+        // btn.setAttribute('disabled', '');
+        modal.classList.remove('modal--opened');
+        setTimeout(function() { modal.classList.add('modal--hidden'); }, 300);
+        modal.classList.remove('modal--hidden');
         menu.classList.remove('modal--lightening');
         containerInner.classList.remove('container__inner--lightening');
-        let animation = modal.animate([
-            { transform: 'translateX(0)' },
-            { transform: 'translateX(100%)' }
-        ], 100);
-        animation.addEventListener('finish', function() {
-            modal.classList.add('modal--hidden');
-        })
-        dropSilence(container);
-        repairTabIndex();
+        container.removeAttribute('style');
+        setTimeout(function() {
+            // btn.removeAttribute('disabled');
+            menuIsOpened = false;
+        }, 600);
     }
 }
 
 export default function modal() {
     for (let feedbackBtn of feedbackBtns) {
-        feedbackBtn.addEventListener('click', openModal(modalFeedback));
+        feedbackBtn.addEventListener('click', openModal(modalFeedback, feedbackBtn));
     }
     for (let callBtn of callBtns) {
-        callBtn.addEventListener('click', openModal(modalCall));
+        callBtn.addEventListener('click', openModal(modalCall, callBtn));
     }
     for (let closeBtn of closeBtns) {
-        closeBtn.addEventListener('click', closeModal(closeBtn.parentElement));
+        closeBtn.addEventListener('click', closeModal(closeBtn.parentElement, closeBtn));
     }
     containerInner.addEventListener('mouseup', function() {
         for (let modal of[modalFeedback, modalCall]) {
-            closeModal(modal)();
+            closeModal(modal, containerInner)();
         }
     });
     menu.addEventListener('mouseup', function() {
         for (let modal of[modalFeedback, modalCall]) {
-            closeModal(modal)();
+            closeModal(modal, menu)();
         }
     });
 }

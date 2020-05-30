@@ -1,6 +1,3 @@
-        @import './menu-header/menu-header.scss';
-        @import './nav/nav.scss';
-        @import './menu-footer/menu-footer.scss';
         // 
         .menu {
             display: block;
@@ -16,6 +13,7 @@
             z-index: 10;
             padding: 24px 16px;
             height: 100%;
+            transition: transform 300ms ease-in, filter 300ms ease-in;
             @media (min-width: 360px + 1) {
                 max-width: 320px;
             }
@@ -28,6 +26,9 @@
                 box-shadow: none;
                 flex-basis: 320px;
                 min-width: 300px;
+            }
+            @media (max-width: $screen-lg - 1) {
+                transform: translateX(-100%);
             }
             // 
             &__inner {
@@ -49,8 +50,10 @@
             // 
             &--hidden {
                 @media (max-width: $screen-lg - 1) {
-                    transform: translateX(-100%);
-                    @include visually-hidden;
+                    display: none;
                 }
+            }
+            &--opened {
+                @include open-modal;
             }
         }

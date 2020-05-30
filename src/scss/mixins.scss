@@ -35,3 +35,8 @@
     overflow: visible !important;
     max-height: unset !important;
 }
+
+@mixin open-modal {
+    transform: translateX(0);
+    filter: opacity(1);
+}

@@ -1,12 +1,9 @@
-@import './lang-list/lang-list.scss';
-@import './top-btn/top-btn.scss';
-// 
 .menu-footer {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     // 
-    &__top-btn {
+    &__main-btn {
         margin-right: 16px;
         margin-bottom: 16px;
     }

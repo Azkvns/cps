@@ -1,20 +1,9 @@
-let serviceItems = document.querySelectorAll('.services__item');
-const screenMdBreakpoint = window.matchMedia('(min-width: 768px)');
-const screenLmBreakpoint = window.matchMedia('(min-width: 1120px)');
-let servicesButtons = document.querySelectorAll('.services__expand-btn');
-let defaultBtnText = servicesButtons[0].textContent;
-
-function toggleTabIndex(items) {
-    return function() {
-        for (let item of items) {
-            if (window.getComputedStyle(item).pointerEvents === 'none') {
-                item.children[0].tabIndex = -1;
-            } else {
-                item.children[0].tabIndex = 0;
-            }
-        }
-    }
-}
+let servicesBrandsItems = document.querySelectorAll('.services--brands .services__item');
+let servicesTechItems = document.querySelectorAll('.services--tech .services__item');
+// 
+let servicesBrandsButton = document.querySelector('.services--brands .expand-btn');
+let defaultExpandBtnText = servicesBrandsButton.textContent;
+let servicesTechButton = document.querySelector('.services--tech .expand-btn');
 
 function showAllItems(items, btn) {
     return function() {
@@ -22,26 +11,16 @@ function showAllItems(items, btn) {
             item.classList.toggle('services__item--visible');
         }
         btn.classList.toggle('expand-btn--active');
-        if (btn.textContent === defaultBtnText) {
+        if (btn.textContent === defaultExpandBtnText) {
             btn.textContent = btn.dataset.active_text;
         } else {
-            btn.textContent = defaultBtnText;
+            btn.textContent = defaultExpandBtnText;
         }
-        toggleTabIndex(items)();
     }
 }
 
-export function repairTabIndex() {
-    toggleTabIndex(serviceItems)();
-}
 
 export default function services() {
-    screenMdBreakpoint.addListener(toggleTabIndex(serviceItems));
-    screenLmBreakpoint.addListener(toggleTabIndex(serviceItems));
-    toggleTabIndex(serviceItems)();
-    // 
-    for (let btn of servicesButtons) {
-        let items = btn.parentElement.querySelectorAll('.services__list .services__item');
-        btn.addEventListener('click', showAllItems(items, btn));
-    }
+    servicesBrandsButton.addEventListener('click', showAllItems(servicesBrandsItems, servicesBrandsButton));
+    servicesTechButton.addEventListener('click', showAllItems(servicesTechItems, servicesTechButton));
 }
